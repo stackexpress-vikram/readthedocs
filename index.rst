@@ -26,5 +26,5 @@ Installations
 
 TEST
 ====
-sub object
+This is a sub object
 ---------

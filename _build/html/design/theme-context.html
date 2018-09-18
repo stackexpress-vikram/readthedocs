@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Read the Docs data passed to Sphinx build context &mdash; Read the Docs 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versions.html">Versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../builds.html">Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Read the Docs features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../yaml-config.html">Read the Docs YAML Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Public API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../embed.html">Embed API</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About Read the Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contributing to Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../team.html">Read the Docs Team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-of-conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advertising/index.html">Advertising</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sponsors.html">Sponsors of Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open-source-philosophy.html">Read the Docs Open Source Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../story.html">The Story of Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../abandoned-projects.html">Policy for Abandoned Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dmca/index.html">DMCA Takedown Policy</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Feature Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../webhooks.html">Webhooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../badges.html">Badges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../alternate_domains.html">Alternate Domains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../localization.html">Localization of Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vcs.html">Version Control System Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subprojects.html">Subprojects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conda.html">Conda Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canonical.html">Canonical URLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../single_version.html">Single Version Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy.html">Privacy Levels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-defined-redirects.html">User-defined Redirects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../automatic-redirects.html">Automatic Redirects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/embed.html">Content Embedding</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tests.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs.html">Building and Contributing to Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/standards.html">Front End Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/buildenvironments.html">Build Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../symlinks.html">How we use symlinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings.html">Interesting Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../i18n.html">Internationalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../issue-labels.html">Overview of issue labels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Security</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Business Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../business/index.html">Read the Docs Business Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Custom Install Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../custom_installs/index.html">Info about custom installs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Designer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Designing Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/">Theme</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Read the Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Read the Docs data passed to Sphinx build context</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/design/theme-context.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="read-the-docs-data-passed-to-sphinx-build-context">
+<h1>Read the Docs data passed to Sphinx build context<a class="headerlink" href="#read-the-docs-data-passed-to-sphinx-build-context" title="Permalink to this headline">¶</a></h1>
+<p>Before calling <code class="xref py py-obj docutils literal notranslate"><span class="pre">sphinx-build</span></code> to render your docs, Read the Docs injects some
+extra context in the templates by using the <a class="reference external" href="http://www.sphinx-doc.org/en/stable/config.html#confval-html_context">html_context Sphinx setting</a> in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file.
+This extra context can be used to build some awesome features in your own theme.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This design document details future features that are <strong>not yet implemented</strong>.
+To discuss this document, please get in touch in the <a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues">issue tracker</a>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/">Read the Docs Sphinx Theme</a> uses this context to add additional features to the built documentation.</p>
+</div>
+<div class="section" id="context-injected">
+<h2>Context injected<a class="headerlink" href="#context-injected" title="Permalink to this headline">¶</a></h2>
+<p>Here is the full list of values injected by Read the Docs as a Python dictionary.
+Note that this dictionary is injected under the main key <code class="xref py py-obj docutils literal notranslate"><span class="pre">readthedocs</span></code>:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;readthedocs&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;v1&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                <span class="s1">&#39;slug&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;verbose_name&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;build_date&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;downloads&#39;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s1">&#39;pdf&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                    <span class="s1">&#39;htmlzip&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                    <span class="s1">&#39;epub&#39;</span><span class="p">:</span> <span class="nb">str</span>
+                <span class="p">},</span>
+                <span class="s1">&#39;links&#39;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s1">&#39;href&#39;</span><span class="p">:</span> <span class="s1">&#39;https://readthedocs.org/api/v2/version/</span><span class="si">{id}</span><span class="s1">/&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;rel&#39;</span><span class="p">:</span> <span class="s1">&#39;self&#39;</span>
+                <span class="p">}],</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;slug&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;language&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;canonical_url&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;subprojects&#39;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                    <span class="s1">&#39;slug&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                    <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                    <span class="s1">&#39;language&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                    <span class="s1">&#39;canonical_url&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                    <span class="s1">&#39;links&#39;</span><span class="p">:</span> <span class="p">[{</span>
+                        <span class="s1">&#39;href&#39;</span><span class="p">:</span> <span class="s1">&#39;https://readthedocs.org/api/v2/project/</span><span class="si">{id}</span><span class="s1">/&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;rel&#39;</span><span class="p">:</span> <span class="s1">&#39;self&#39;</span>
+                    <span class="p">}]</span>
+                <span class="p">}],</span>
+                <span class="s1">&#39;links&#39;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s1">&#39;href&#39;</span><span class="p">:</span> <span class="s1">&#39;https://readthedocs.org/api/v2/project/</span><span class="si">{id}</span><span class="s1">/&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;rel&#39;</span><span class="p">:</span> <span class="s1">&#39;self&#39;</span>
+                <span class="p">}]</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;sphinx&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;html_theme&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;source_suffix&#39;</span><span class="p">:</span> <span class="nb">str</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;analytics&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;user_analytics_code&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;global_analytics_code&#39;</span><span class="p">:</span> <span class="nb">str</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;vcs&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># &#39;bitbucket&#39;, &#39;github&#39;, &#39;gitlab&#39; or &#39;svn&#39;</span>
+                <span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;repo&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;commit&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;display&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+                <span class="s1">&#39;conf_py_path&#39;</span><span class="p">:</span> <span class="nb">str</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;meta&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;API_HOST&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;MEDIA_URL&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;PRODUCTION_DOMAIN&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                <span class="s1">&#39;READTHEDOCS&#39;</span><span class="p">:</span> <span class="kc">True</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Read the Docs passes information to <code class="xref py py-obj docutils literal notranslate"><span class="pre">sphinx-build</span></code> that may change in the future
+(e.g. at the moment of building the version <code class="xref py py-obj docutils literal notranslate"><span class="pre">0.6</span></code> this was the <code class="xref py py-obj docutils literal notranslate"><span class="pre">latest</span></code>
+but then <code class="xref py py-obj docutils literal notranslate"><span class="pre">0.7</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">0.8</span></code> were added to the project and also built under Read the Docs)
+so it’s your responsibility to use this context in a proper way.</p>
+<p class="last">In case you want <em>fresh data</em> at the moment of reading your documentation,
+you should consider using the <span class="xref std std-doc">Read the Docs Public API</span> via Javascript.</p>
+</div>
+</div>
+<div class="section" id="using-read-the-docs-context-in-your-theme">
+<h2>Using Read the Docs context in your theme<a class="headerlink" href="#using-read-the-docs-context-in-your-theme" title="Permalink to this headline">¶</a></h2>
+<p>In case you want to access to this data from your theme, you can use it like this:</p>
+<div class="code html highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">readthedocs</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">vcs</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;github&#39;</span> <span class="o">%</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://github.com/{{ readthedocs.v1.vcs.user }}/{{ readthedocs.v1.vcs.repo }}</span>
+    <span class="o">/</span><span class="n">blob</span><span class="o">/</span><span class="p">{{</span> <span class="n">readthedocs</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">vcs</span><span class="o">.</span><span class="n">version</span> <span class="p">}}{{</span> <span class="n">readthedocs</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">vcs</span><span class="o">.</span><span class="n">conf_py_path</span> <span class="p">}}{{</span> <span class="n">pagename</span> <span class="p">}}</span><span class="o">.</span><span class="n">rst</span><span class="s2">&quot;&gt;</span>
+    <span class="n">Show</span> <span class="n">on</span> <span class="n">GitHub</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In this example, we are using <code class="docutils literal notranslate"><span class="pre">pagename</span></code> which is a Sphinx variable
+representing the name of the page you are on. More information about Sphinx
+variables can be found in the <a class="reference external" href="http://www.sphinx-doc.org/en/stable/templating.html#global-variables">Sphinx documentation</a>.</p>
+</div>
+</div>
+<div class="section" id="customizing-the-context">
+<h2>Customizing the context<a class="headerlink" href="#customizing-the-context" title="Permalink to this headline">¶</a></h2>
+<p>In case you want to add some extra context you will have to declare your own
+<code class="docutils literal notranslate"><span class="pre">html_context</span></code> in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> like this:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;author&#39;</span><span class="p">:</span> <span class="s1">&#39;My Name&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%y&#39;</span><span class="p">),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and use it inside your theme as:</p>
+<div class="code html highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">This</span> <span class="n">documentation</span> <span class="n">was</span> <span class="n">written</span> <span class="n">by</span> <span class="p">{{</span> <span class="n">author</span> <span class="p">}}</span> <span class="n">on</span> <span class="p">{{</span> <span class="n">date</span> <span class="p">}}</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Take into account that the Read the Docs context is injected after your definition of <code class="docutils literal notranslate"><span class="pre">html_context</span></code> so,
+it’s not possible to override Read the Docs context values.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2010-2018, Read the Docs, Inc &amp; contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

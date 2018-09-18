@@ -1,0 +1,1371 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Changelog &mdash; Read the Docs 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="install.html" />
+    <link rel="prev" title="Content Embedding" href="features/embed.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versions.html">Versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builds.html">Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Read the Docs features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yaml-config.html">Read the Docs YAML Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">Public API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="embed.html">Embed API</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About Read the Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contributing to Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="team.html">Read the Docs Team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-of-conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advertising/index.html">Advertising</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sponsors.html">Sponsors of Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open-source-philosophy.html">Read the Docs Open Source Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="story.html">The Story of Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="abandoned-projects.html">Policy for Abandoned Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dmca/index.html">DMCA Takedown Policy</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Feature Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="webhooks.html">Webhooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="badges.html">Badges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alternate_domains.html">Alternate Domains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="localization.html">Localization of Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vcs.html">Version Control System Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subprojects.html">Subprojects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conda.html">Conda Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="canonical.html">Canonical URLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="single_version.html">Single Version Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="privacy.html">Privacy Levels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-defined-redirects.html">User-defined Redirects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automatic-redirects.html">Automatic Redirects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features/embed.html">Content Embedding</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-6-5">Version 2.6.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-6-4">Version 2.6.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-6-3">Version 2.6.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-6-2">Version 2.6.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-6-1">Version 2.6.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-6-0">Version 2.6.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-5-3">Version 2.5.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-5-2">Version 2.5.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-5-1">Version 2.5.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-5-0">Version 2.5.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-4-0">Version 2.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-14">Version 2.3.14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-13">Version 2.3.13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-12">Version 2.3.12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-11">Version 2.3.11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-10">Version 2.3.10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-9">Version 2.3.9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-8">Version 2.3.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-7">Version 2.3.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-6">Version 2.3.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-5">Version 2.3.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-4">Version 2.3.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-3">Version 2.3.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-2">Version 2.3.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-1">Version 2.3.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-3-0">Version 2.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-2-1">Version 2.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-2-0">Version 2.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-1-6">Version 2.1.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-1-5">Version 2.1.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-1-4">Version 2.1.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-1-3">Version 2.1.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-1-2">Version 2.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-1-1">Version 2.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-1-0">Version 2.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2-0">Version 2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#previous-releases">Previous releases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#july-23-2015">July 23, 2015</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#code-notes">Code Notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deployment-notes">Deployment Notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#development-update-notes">Development Update Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Building and Contributing to Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/standards.html">Front End Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/buildenvironments.html">Build Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="symlinks.html">How we use symlinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Interesting Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="i18n.html">Internationalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="issue-labels.html">Overview of issue labels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Business Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="business/index.html">Read the Docs Business Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Custom Install Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="custom_installs/index.html">Info about custom installs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Designer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Designing Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/">Theme</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Read the Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Changelog</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/changelog.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="version-2-6-5">
+<h2>Version 2.6.5<a class="headerlink" href="#version-2-6-5" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">August 29, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Tests for yaml file regex (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4587">#4587</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Respect user language when caching homepage (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4585">#4585</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Add start and termination to YAML file regex (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4584">#4584</a>)</li>
+<li><a class="reference external" href="http://github.com/safwanrahman">&#64;safwanrahman</a>: [Fix #4576] Do not delete projects which have multiple users (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4577">#4577</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-6-4">
+<h2>Version 2.6.4<a class="headerlink" href="#version-2-6-4" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">August 29, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Update tests failing on master (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4575">#4575</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Add a flag to disable docsearch (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4570">#4570</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix nested syntax in docs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4567">#4567</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix incorrect reraise (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4566">#4566</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Add a note about specifying the version of build tools (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4562">#4562</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Serve badges directly from local filesystem (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4561">#4561</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Build JSON artifacts in HTML builder (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4554">#4554</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Route task to proper queue (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4553">#4553</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Sanitize BuildCommand.output by removing NULL characters (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4552">#4552</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fix changelog for 2.6.3 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4548">#4548</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Remove hiredis (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4542">#4542</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Use the STATIC_URL for static files to avoid redirection (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4522">#4522</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Update docs about build process (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4515">#4515</a>)</li>
+<li><a class="reference external" href="http://github.com/StefanoChiodino">&#64;StefanoChiodino</a>: Allow for period as a prefix and yaml extension for config file (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4512">#4512</a>)</li>
+<li><a class="reference external" href="http://github.com/AumitLeon">&#64;AumitLeon</a>: Update information on mkdocs build process (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4508">#4508</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Fix Exact Redirect to work properly when using $rest keyword (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4501">#4501</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Mark some BuildEnvironmentError exceptions as Warning and do not log them (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4495">#4495</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: projects: don’t explode trying to update UpdateDocsTaskStep state (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4485">#4485</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Note with the developer flow to update our app translations (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4481">#4481</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Add <code class="xref py py-obj docutils literal notranslate"><span class="pre">trimmed</span></code> to all multilines <code class="xref py py-obj docutils literal notranslate"><span class="pre">blocktrans</span></code> tags (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4480">#4480</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Example and note with usage of trimmed option in blocktrans (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4479">#4479</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Update Transifex resources for our documentation (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4478">#4478</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Documentation for Manage Translations (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4470">#4470</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Port <a class="reference external" href="https://github.com/rtfd/readthedocs-build/pull/38/">https://github.com/rtfd/readthedocs-build/pull/38/</a> (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4461">#4461</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Match v1 config interface to new one (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4456">#4456</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Skip tags that point to blob objects instead of commits (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4442">#4442</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Document python.use_system_site_packages option (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4422">#4422</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: More tips about how to reduce resources usage (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4419">#4419</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: projects: user in ProjectQuerySetBase.for_admin_user is mandatory (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4417">#4417</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-6-3">
+<h2>Version 2.6.3<a class="headerlink" href="#version-2-6-3" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">August 18, 2018</td>
+</tr>
+</tbody>
+</table>
+<p>Release to Azure!</p>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Add Sponsors list to footer (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4424">#4424</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Cache node_modules to speed up CI (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4484">#4484</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: templates: mark missing string for translation on project edit (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4518">#4518</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Performance improvement: cache version listing on the homepage (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4526">#4526</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Remove mailgun from our dependencies (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4531">#4531</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Improved ad block detection (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4532">#4532</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Revert “Remove SelectiveFileSystemFolder finder workaround” (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4533">#4533</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Slight clarification on turning off ads for a project (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4534">#4534</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fix the sponsor image paths (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4535">#4535</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Update build assets (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4537">#4537</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-6-2">
+<h2>Version 2.6.2<a class="headerlink" href="#version-2-6-2" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">August 14, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Custom domain clarifications (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4514">#4514</a>)</li>
+<li><a class="reference external" href="http://github.com/trein">&#64;trein</a>: Use single quote throughout the file (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4513">#4513</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Support ads on pallets themes (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4499">#4499</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Only use HostHeaderSSLAdapter for SSL/HTTPS connections (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4498">#4498</a>)</li>
+<li><a class="reference external" href="http://github.com/keflavich">&#64;keflavich</a>: Very minor English correction (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4497">#4497</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: All static media is run through “collectstatic” (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4489">#4489</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Fix reST structure (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4488">#4488</a>)</li>
+<li><a class="reference external" href="http://github.com/nijel">&#64;nijel</a>: Document expected delay on CNAME change and need for CAA (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4487">#4487</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Allow enforcing HTTPS for custom domains (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4483">#4483</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Add some details around community ad qualifications (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4436">#4436</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Updates to manifest storage (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4430">#4430</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Update alt domains docs with SSL (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4425">#4425</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Add SNI support for API HTTPS endpoint (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4423">#4423</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: API v1 cleanup (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4415">#4415</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Allow filtering versions by active (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4414">#4414</a>)</li>
+<li><a class="reference external" href="http://github.com/mlncn">&#64;mlncn</a>: Fix broken link (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4410">#4410</a>)</li>
+<li><a class="reference external" href="http://github.com/safwanrahman">&#64;safwanrahman</a>: [Fix #4407] Port Project Search for Elasticsearch 6.x (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4408">#4408</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Add client ID to Google Analytics requests (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4404">#4404</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: projects: fix filtering in projects_tag_detail (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4398">#4398</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fix a proxy model bug related to ad-free (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4390">#4390</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Release 2.6.1 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4389">#4389</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Do not access database from builds to check ad-free (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4387">#4387</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Adapt YAML config integration tests (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4385">#4385</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Set full <code class="xref py py-obj docutils literal notranslate"><span class="pre">source_file</span></code> path for default configuration (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4379">#4379</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Make <code class="xref py py-obj docutils literal notranslate"><span class="pre">get_version</span></code> usable from a specified path (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4376">#4376</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: More tags when logging errors to Sentry (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4375">#4375</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Check for ‘options’ in update_repos command (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4373">#4373</a>)</li>
+<li><a class="reference external" href="http://github.com/safwanrahman">&#64;safwanrahman</a>: [Fix  #4333] Implement asynchronous search reindex functionality using celery (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4368">#4368</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: V2 of the configuration file (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4355">#4355</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Remove the UID from the GA measurement protocol (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4347">#4347</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Mount <code class="xref py py-obj docutils literal notranslate"><span class="pre">pip_cache_path</span></code> in Docker container (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3556">#3556</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Show subprojects in search results (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/1866">#1866</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-6-1">
+<h2>Version 2.6.1<a class="headerlink" href="#version-2-6-1" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">July 17, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Do not access database from builds to check ad-free (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4387">#4387</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Adapt YAML config integration tests (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4385">#4385</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Set full <code class="xref py py-obj docutils literal notranslate"><span class="pre">source_file</span></code> path for default configuration (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4379">#4379</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: More tags when logging errors to Sentry (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4375">#4375</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-6-0">
+<h2>Version 2.6.0<a class="headerlink" href="#version-2-6-0" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">July 16, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>Adds initial support for HTTPS on custom domains</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Revert “projects: serve badge with same protocol as site” (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4353">#4353</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Do not overwrite sphinx context variables feature (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4349">#4349</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Calrify docs about how rtd select the stable version (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4348">#4348</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Remove the UID from the GA measurement protocol (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4347">#4347</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix error in command (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4345">#4345</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Improvements for the build/version admin (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4344">#4344</a>)</li>
+<li><a class="reference external" href="http://github.com/safwanrahman">&#64;safwanrahman</a>: [Fix #4265] Porting frontend docsearch to work with new API (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4340">#4340</a>)</li>
+<li><a class="reference external" href="http://github.com/ktdreyer">&#64;ktdreyer</a>: fix spelling of “demonstrating” (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4336">#4336</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Warning about theme context implementation status (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4335">#4335</a>)</li>
+<li><a class="reference external" href="http://github.com/Blendify">&#64;Blendify</a>: Docs: Let Theme Choose Pygments Theme (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4331">#4331</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Disable the ad block nag for ad-free projects (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4329">#4329</a>)</li>
+<li><a class="reference external" href="http://github.com/safwanrahman">&#64;safwanrahman</a>: [fix #4265] Port Document search API for Elasticsearch 6.x (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4309">#4309</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Refactor configuration object to class based (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4298">#4298</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-5-3">
+<h2>Version 2.5.3<a class="headerlink" href="#version-2-5-3" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">July 05, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: Do less work in querysets (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4322">#4322</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix deprecations in management commands (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4321">#4321</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Add a flag for marking a project ad-free (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4313">#4313</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Use “npm run lint” from tox (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4312">#4312</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fix issues building static assets (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4311">#4311</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Use PATHs to call clear_artifacts (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4296">#4296</a>)</li>
+<li><a class="reference external" href="http://github.com/safwanrahman">&#64;safwanrahman</a>: [Fix #2457] Implement exact match search (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4292">#4292</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: API filtering improvements (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4285">#4285</a>)</li>
+<li><a class="reference external" href="http://github.com/annegentle">&#64;annegentle</a>: Remove self-referencing links for webhooks docs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4283">#4283</a>)</li>
+<li><a class="reference external" href="http://github.com/safwanrahman">&#64;safwanrahman</a>: [Fix #2328 #2013] Refresh search index and test for case insensitive search (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4277">#4277</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: doc_builder: clarify sphinx backend append_conf docstring (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4276">#4276</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Add documentation for APIv2 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4274">#4274</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Wrap notifications HTML code into a block (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4273">#4273</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Move config.py from rtd build (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4272">#4272</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Fix our use of <code class="xref py py-obj docutils literal notranslate"><span class="pre">--use-wheel</span></code> in pip. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4269">#4269</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Revert “Merge pull request #4206 from FlorianKuckelkorn/fix/pip-breaking-change” (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4261">#4261</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Fix triggering a build for a skipped project (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4255">#4255</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Update default sphinx version (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4250">#4250</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Move config module from rtd-build repo (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4242">#4242</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Allow staying logged in for longer (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4236">#4236</a>)</li>
+<li><a class="reference external" href="http://github.com/safwanrahman">&#64;safwanrahman</a>: Upgrade Elasticsearch to version 6.x (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4211">#4211</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Make tests extensible from corporate site (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4095">#4095</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: <code class="xref py py-obj docutils literal notranslate"><span class="pre">stable</span></code> version stuck on a specific commit (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3913">#3913</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-5-2">
+<h2>Version 2.5.2<a class="headerlink" href="#version-2-5-2" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">June 18, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Add a page detailing ad blocking (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4244">#4244</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: projects: serve badge with same protocol as site (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4228">#4228</a>)</li>
+<li><a class="reference external" href="http://github.com/FlorianKuckelkorn">&#64;FlorianKuckelkorn</a>: Fixed breaking change in pip 10.0.0b1 (2018-03-31) (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4206">#4206</a>)</li>
+<li><a class="reference external" href="http://github.com/StefanoChiodino">&#64;StefanoChiodino</a>: Document that readthedocs file can now have yaml extension (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4129">#4129</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Downgrade docker to 3.1.3 because of timeouts in EXEC call (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4241">#4241</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Move parser tests from rtd-build repo (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4225">#4225</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Handle revoked oauth permissions by the user (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4074">#4074</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Allow to hook the initial build from outside (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4033">#4033</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-5-1">
+<h2>Version 2.5.1<a class="headerlink" href="#version-2-5-1" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">June 14, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Add feature to build json with html in the same build (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4229">#4229</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Prioritize ads based on content (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4224">#4224</a>)</li>
+<li><a class="reference external" href="http://github.com/mostaszewski">&#64;mostaszewski</a>: #4170 - Link the version in the footer to the changelog (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4217">#4217</a>)</li>
+<li><a class="reference external" href="http://github.com/Jmennius">&#64;Jmennius</a>: Add provision_elasticsearch command (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4216">#4216</a>)</li>
+<li><a class="reference external" href="http://github.com/SuriyaaKudoIsc">&#64;SuriyaaKudoIsc</a>: Use the latest YouTube share URL (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4209">#4209</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Allow staff to trigger project builds (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4207">#4207</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Use autosectionlabel in the privacy policy (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4204">#4204</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: These links weren’t correct after #3632 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4203">#4203</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Release 2.5.0 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4200">#4200</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Fix Build: Convert md to rst in docs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4199">#4199</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Updates to #3850 to fix merge conflict (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4198">#4198</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Build on top of #3881 and put docs in custom_installs. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4196">#4196</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Increase the max theme version (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4195">#4195</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Remove maxcdn reqs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4194">#4194</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Add missing gitignore item for ES testing (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4193">#4193</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: fabfile: update i18n helpers (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4189">#4189</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: Update italian locale (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4188">#4188</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: locale: update and build the english translation (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4187">#4187</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Upgrade celery to avoid AtributeError:async (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4185">#4185</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Prepare code for custo mkdocs.yaml location (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4184">#4184</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Updates to our triage guidelines (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4180">#4180</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Server side analytics (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4131">#4131</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Upgrade packages with pur (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4124">#4124</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix resync remote repos (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4113">#4113</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Add schema for configuration file with yamale (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4084">#4084</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Ad block nag to urge people to whitelist (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4037">#4037</a>)</li>
+<li><a class="reference external" href="http://github.com/benjaoming">&#64;benjaoming</a>: Add Mexican Spanish as a project language (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3588">#3588</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-5-0">
+<h2>Version 2.5.0<a class="headerlink" href="#version-2-5-0" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">June 06, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Fix Build: Convert md to rst in docs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4199">#4199</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Remove maxcdn reqs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4194">#4194</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Add missing gitignore item for ES testing (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4193">#4193</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: fabfile: update i18n helpers (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4189">#4189</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: Update italian locale (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4188">#4188</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: locale: update and build the english translation (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4187">#4187</a>)</li>
+<li><a class="reference external" href="http://github.com/safwanrahman">&#64;safwanrahman</a>: Test for search functionality (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4116">#4116</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Update mkdocs to the latest (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4041">#4041</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Ad block nag to urge people to whitelist (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4037">#4037</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Decouple the theme JS from readthedocs.org (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3968">#3968</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: tests: fixup url tests in test_privacy_urls (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3966">#3966</a>)</li>
+<li><a class="reference external" href="http://github.com/fenilgandhi">&#64;fenilgandhi</a>: Add support for different badge styles (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3632">#3632</a>)</li>
+<li><a class="reference external" href="http://github.com/benjaoming">&#64;benjaoming</a>: Add Mexican Spanish as a project language (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3588">#3588</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Wrap versions’ list to look more consistent (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3445">#3445</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Move CDN code to external abstraction (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/2091">#2091</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-4-0">
+<h2>Version 2.4.0<a class="headerlink" href="#version-2-4-0" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">May 31, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>This fixes assets that were generated against old dependencies in 2.3.14</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Fix issues with search javascript (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4176">#4176</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Use anonymous refs in CHANGELOG (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4173">#4173</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix some warnings on docs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4172">#4172</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Update the privacy policy date (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4171">#4171</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Note about state and metro ad targeting (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4169">#4169</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Add another guide around fixing memory usage. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4168">#4168</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Download raw build log (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3585">#3585</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Add “edit” and “view docs” buttons to subproject list (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3572">#3572</a>)</li>
+<li><a class="reference external" href="http://github.com/kennethlarsen">&#64;kennethlarsen</a>: Remove outline reset to bring back outline (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3512">#3512</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-14">
+<h2>Version 2.3.14<a class="headerlink" href="#version-2-3-14" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">May 30, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Remove CSS override that doesn’t exist. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4165">#4165</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Include a DMCA request template (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4164">#4164</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: No CSRF cookie for docs pages (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4153">#4153</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Small footer rework (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4150">#4150</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix prospector dependencies (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4149">#4149</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Remove deploy directory which is unused. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4147">#4147</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Use autosectionlabel extension (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4146">#4146</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Add Intercom to the privacy policy (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4145">#4145</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Minimum refactor to decide_if_cors (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4143">#4143</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Ignore migrations from coverage report (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4141">#4141</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: 5xx status in old webhooks (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4139">#4139</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fix with Lato Bold font (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4138">#4138</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Release 2.3.13 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4137">#4137</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Build static assets (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4136">#4136</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: oauth/services: correct error handling in paginate (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4134">#4134</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: oauth/services: don’t abuse log.exception (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4133">#4133</a>)</li>
+<li><a class="reference external" href="http://github.com/cedk">&#64;cedk</a>: Use quiet mode to retrieve branches from mercurial (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4114">#4114</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Add <code class="xref py py-obj docutils literal notranslate"><span class="pre">has_valid_clone</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">has_valid_webhook</span></code> to ProjectAdminSerializer (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4107">#4107</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Put the rtd extension to the beginning of the list (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4054">#4054</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Use gitpython for tags (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4052">#4052</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Do Not Track support (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4046">#4046</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Set urlconf to None after changing SUBDOMAIN setting (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4032">#4032</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Fix /404/ testing page (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3976">#3976</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: Fix some tests with postgres (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3958">#3958</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: Fixup DJANGO_SETTINGS_SKIP_LOCAL in tests (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3899">#3899</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: templates: mark a few more strings for translations (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3869">#3869</a>)</li>
+<li><a class="reference external" href="http://github.com/ze">&#64;ze</a>: Make search bar in dashboard have a more clear message. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3844">#3844</a>)</li>
+<li><a class="reference external" href="http://github.com/varunotelli">&#64;varunotelli</a>: Pointed users to Python3.6 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3817">#3817</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: [RDY] Fix tests for environment (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3764">#3764</a>)</li>
+<li><a class="reference external" href="http://github.com/ajatprabha">&#64;ajatprabha</a>: Ticket #3694: rename owners to maintainers (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3703">#3703</a>)</li>
+<li><a class="reference external" href="http://github.com/SanketDG">&#64;SanketDG</a>: Refactor to replace old logging to avoid mangling (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3677">#3677</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Add rstcheck to CI (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3624">#3624</a>)</li>
+<li><a class="reference external" href="http://github.com/techtonik">&#64;techtonik</a>: Update Git on prod (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3615">#3615</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Allow to hide version warning (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3595">#3595</a>)</li>
+<li><a class="reference external" href="http://github.com/cclauss">&#64;cclauss</a>: Modernize Python 2 code to get ready for Python 3 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3514">#3514</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Consistent version format (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3504">#3504</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-13">
+<h2>Version 2.3.13<a class="headerlink" href="#version-2-3-13" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">May 23, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Build static assets (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4136">#4136</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Don’t sync _static dir for search builder (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4120">#4120</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Use the latest Lato release (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4093">#4093</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Update Gold Member marketing (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4063">#4063</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fix missing fonts (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4060">#4060</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Additional validation when changing the project language (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3790">#3790</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Improve yaml config docs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3685">#3685</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-12">
+<h2>Version 2.3.12<a class="headerlink" href="#version-2-3-12" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">May 21, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Remove Django deprecation warning (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4112">#4112</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Display feature flags in the admin (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4108">#4108</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Set valid clone in project instance inside the version object also (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4105">#4105</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Use the latest theme version in the default builder (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4096">#4096</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Use next field to redirect user when login is done by social (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4083">#4083</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Update the <code class="xref py py-obj docutils literal notranslate"><span class="pre">documentation_type</span></code> when it’s set to ‘auto’ (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4080">#4080</a>)</li>
+<li><a class="reference external" href="http://github.com/brainwane">&#64;brainwane</a>: Update link to license in philosophy document (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4059">#4059</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Update local assets for theme to 0.3.1 tag (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4047">#4047</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix unbalanced div (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4044">#4044</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Remove haystack from code base (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4039">#4039</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Subdomains use HTTPS if settings specify (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3987">#3987</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Draft Privacy Policy (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3978">#3978</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Allow import Gitlab repo manually and set a webhook automatically (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3934">#3934</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Enable ads on the readthedocs mkdocs theme (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3922">#3922</a>)</li>
+<li><a class="reference external" href="http://github.com/bansalnitish">&#64;bansalnitish</a>: Fixes #2953 - Url resolved with special characters (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3725">#3725</a>)</li>
+<li><a class="reference external" href="http://github.com/Jigar3">&#64;Jigar3</a>: Deleted bookmarks app (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3663">#3663</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-11">
+<h2>Version 2.3.11<a class="headerlink" href="#version-2-3-11" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">May 01, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Update local assets for theme to 0.3.1 tag (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4047">#4047</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix unbalanced div (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4044">#4044</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Remove haystack from code base (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4039">#4039</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Remove dead code from api v1 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4038">#4038</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Bump sphinx default version to 1.7.4 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4035">#4035</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Detail where ads are shown (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4031">#4031</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Make email verification optional for dev (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4024">#4024</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Support sign in and sign up with GH/GL/BB (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4022">#4022</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Remove old varnish purge utility function (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4019">#4019</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Remove build queue length warning on build list page (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4018">#4018</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Don’t check order on assertQuerysetEqual on tests for subprojects (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4016">#4016</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Tests for view docs api response (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4014">#4014</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: MkDocs projects use RTD’s analytics privacy improvements (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4013">#4013</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Release 2.3.10 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4009">#4009</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Remove typekit fonts (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3982">#3982</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Move dynamic-fixture to testing requirements (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3956">#3956</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix view docs link (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3882">#3882</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: [WIP] Remove comments app (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3802">#3802</a>)</li>
+<li><a class="reference external" href="http://github.com/Jigar3">&#64;Jigar3</a>: Deleted bookmarks app (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3663">#3663</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-10">
+<h2>Version 2.3.10<a class="headerlink" href="#version-2-3-10" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">April 24, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Downgrade docker to 3.1.3 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/4003">#4003</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-9">
+<h2>Version 2.3.9<a class="headerlink" href="#version-2-3-9" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">April 20, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Fix recursion problem more generally (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3989">#3989</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-8">
+<h2>Version 2.3.8<a class="headerlink" href="#version-2-3-8" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">April 20, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Give TaskStep class knowledge of the underlying task (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3983">#3983</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Resolve domain when a project is a translation of itself (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3981">#3981</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-7">
+<h2>Version 2.3.7<a class="headerlink" href="#version-2-3-7" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">April 19, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Fix server_error_500 path on single version (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3975">#3975</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fix bookmark app lint failures (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3969">#3969</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Use latest setuptools (39.0.1) by default on build process (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3967">#3967</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Fix exact redirects. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3965">#3965</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Make <code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_domain</span></code> work when a project is subproject of itself (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3962">#3962</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Remove django-celery-beat and use the default scheduler (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3959">#3959</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: Fix some tests with postgres (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3958">#3958</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Add advertising details docs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3955">#3955</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Use pur to upgrade python packages (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3953">#3953</a>)</li>
+<li><a class="reference external" href="http://github.com/ze">&#64;ze</a>: Make adjustments to Projects page (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3948">#3948</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Small change to Chinese language names (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3947">#3947</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Don’t share state in build task (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3946">#3946</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fixed footer ad width fix (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3944">#3944</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Allow extend Translation and Subproject form logic from corporate (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3937">#3937</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Resync valid webhook for project manually imported (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3935">#3935</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Resync webhooks from Admin (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3933">#3933</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Fix attribute order call (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3930">#3930</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Mention RTD in the Project URL of the issue template (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3928">#3928</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Correctly report mkdocs theme name (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3920">#3920</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: Fixup DJANGO_SETTINGS_SKIP_LOCAL in tests (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3899">#3899</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Show an adblock admonition in the dev console (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3894">#3894</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix view docs link (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3882">#3882</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: templates: mark a few more strings for translations (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3869">#3869</a>)</li>
+<li><a class="reference external" href="http://github.com/ze">&#64;ze</a>: Update quickstart from README (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3847">#3847</a>)</li>
+<li><a class="reference external" href="http://github.com/vidartf">&#64;vidartf</a>: Fix page redirect preview (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3811">#3811</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: [RDY] Fix requirements file lookup (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3800">#3800</a>)</li>
+<li><a class="reference external" href="http://github.com/aasis21">&#64;aasis21</a>: Documentation for build notifications using webhooks. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3671">#3671</a>)</li>
+<li><a class="reference external" href="http://github.com/mashrikt">&#64;mashrikt</a>: [#2967] Scheduled tasks for cleaning up messages (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3604">#3604</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Show URLS for exact redirect (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3593">#3593</a>)</li>
+<li><a class="reference external" href="http://github.com/marcelstoer">&#64;marcelstoer</a>: Doc builder template should check for mkdocs_page_input_path before using it (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3536">#3536</a>)</li>
+<li><a class="reference external" href="http://github.com/Code0x58">&#64;Code0x58</a>: Document creation of slumber user (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3461">#3461</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-6">
+<h2>Version 2.3.6<a class="headerlink" href="#version-2-3-6" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">April 05, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Drop readthedocs- prefix to submodule (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3916">#3916</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: This fixes two bugs apparent in nesting of translations in subprojects (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3909">#3909</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Use new django celery beat scheduler (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3908">#3908</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Use a proper default for <code class="xref py py-obj docutils literal notranslate"><span class="pre">docker</span></code> attribute on UpdateDocsTask (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3907">#3907</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Handle errors from publish_parts (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3905">#3905</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Drop pdbpp from testing requirements (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3904">#3904</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Little improve on sync_versions (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3902">#3902</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Save Docker image data in JSON file only for DockerBuildEnvironment (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3897">#3897</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Single analytics file for all builders (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3896">#3896</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Organize logging levels (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3893">#3893</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-5">
+<h2>Version 2.3.5<a class="headerlink" href="#version-2-3-5" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">April 05, 2018</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Drop pdbpp from testing requirements (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3904">#3904</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Resolve subproject correctly in the case of single version (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3901">#3901</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fixed footer ads again (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3895">#3895</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fix an Alabaster ad positioning issue (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3889">#3889</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Save Docker image hash in RTD environment.json file (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3880">#3880</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Add ref links for easier intersphinx on yaml config page (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3877">#3877</a>)</li>
+<li><a class="reference external" href="http://github.com/rajujha373">&#64;rajujha373</a>: Typo correction in docs/features.rst (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3872">#3872</a>)</li>
+<li><a class="reference external" href="http://github.com/gaborbernat">&#64;gaborbernat</a>: add description for tox tasks (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3868">#3868</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Another CORS hotfix for the sustainability API (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3862">#3862</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Fix up some of the logic around repo and submodule URLs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3860">#3860</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fix linting errors in tests (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3855">#3855</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Use gitpython to find a commit reference (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3843">#3843</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Remove pinned CSS Select version (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3813">#3813</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Use JSONP for sustainability API (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3789">#3789</a>)</li>
+<li><a class="reference external" href="http://github.com/rajujha373">&#64;rajujha373</a>: #3718: Added date to changelog (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3788">#3788</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: tests: mock test_conf_file_not_found filesystem access (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3740">#3740</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-4">
+<span id="id104"></span><h2>Version 2.3.4<a class="headerlink" href="#version-2-3-4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Release for static assets</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-3">
+<h2>Version 2.3.3<a class="headerlink" href="#version-2-3-3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fix linting errors in tests (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3855">#3855</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Fix linting issues (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3838">#3838</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Update instance and model when <code class="xref py py-obj docutils literal notranslate"><span class="pre">record_as_success</span></code> (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3831">#3831</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Reorder GSOC projects, and note priority order (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3823">#3823</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Add temporary method for skipping submodule checkout (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3821">#3821</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Remove pinned CSS Select version (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3813">#3813</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Use readthedocs-common to share linting files accross different repos (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3808">#3808</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Use JSONP for sustainability API (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3789">#3789</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Define useful celery beat task for development (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3762">#3762</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Auto-generate conf.py compatible with Py2 and Py3 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3745">#3745</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Task to remove orphan symlinks (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3543">#3543</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix regex for public bitbucket repo (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3533">#3533</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Documentation for RTD context sent to the Sphinx theme (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3490">#3490</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Show link to docs on a build (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3446">#3446</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-2">
+<h2>Version 2.3.2<a class="headerlink" href="#version-2-3-2" title="Permalink to this headline">¶</a></h2>
+<p>This version adds a hotfix branch that adds model validation to the repository
+URL to ensure strange URL patterns can’t be used.</p>
+</div>
+<div class="section" id="version-2-3-1">
+<h2>Version 2.3.1<a class="headerlink" href="#version-2-3-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Update instance and model when <code class="xref py py-obj docutils literal notranslate"><span class="pre">record_as_success</span></code> (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3831">#3831</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Bump docker -&gt; 3.1.3 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3828">#3828</a>)</li>
+<li><a class="reference external" href="http://github.com/Doug-AWS">&#64;Doug-AWS</a>: Pip install note for Windows (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3827">#3827</a>)</li>
+<li><a class="reference external" href="http://github.com/himanshutejwani12">&#64;himanshutejwani12</a>: Update index.rst (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3824">#3824</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Reorder GSOC projects, and note priority order (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3823">#3823</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Autolint cleanup for #3821 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3822">#3822</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Add temporary method for skipping submodule checkout (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3821">#3821</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Pin astroid to fix linter issue on travis (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3816">#3816</a>)</li>
+<li><a class="reference external" href="http://github.com/varunotelli">&#64;varunotelli</a>: Update install.rst dropped the Python 2.7 only part (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3814">#3814</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: Update machine field when activating a version from project_version_detail (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3797">#3797</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Allow members of “Admin” Team to wipe version envs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3791">#3791</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Add sustainability api to CORS (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3782">#3782</a>)</li>
+<li><a class="reference external" href="http://github.com/durwasa-chakraborty">&#64;durwasa-chakraborty</a>: Fixed a grammatical error (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3780">#3780</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Trying to solve the end line character for a font file (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3776">#3776</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix tox env for coverage (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3772">#3772</a>)</li>
+<li><a class="reference external" href="http://github.com/bansalnitish">&#64;bansalnitish</a>: Added eslint rules (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3768">#3768</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Use sustainability api for advertising (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3747">#3747</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Add a sustainability API (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3672">#3672</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Upgrade django-pagination to a “maintained” fork (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3666">#3666</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Project updated when subproject modified (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3649">#3649</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Anonymize IP addresses for Google Analytics (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3626">#3626</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Improve “Sharing” docs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3472">#3472</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Upgrade docker-py to its latest version (docker==3.1.1) (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3243">#3243</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Upgrade all packages using <code class="xref py py-obj docutils literal notranslate"><span class="pre">pur</span></code> tool (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/2916">#2916</a>)</li>
+<li><a class="reference external" href="http://github.com/rixx">&#64;rixx</a>: Fix page redirect preview (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/2711">#2711</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-3-0">
+<span id="id105"></span><h2>Version 2.3.0<a class="headerlink" href="#version-2-3-0" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Version 2.3.0 includes a security fix for project translations. See
+<span class="xref std std-ref">security-2.3.0</span> for more information</p>
+</div>
+<ul class="simple">
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix tox env for coverage (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3772">#3772</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Try to fix end of file (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3761">#3761</a>)</li>
+<li><a class="reference external" href="http://github.com/berkerpeksag">&#64;berkerpeksag</a>: Fix indentation in docs/faq.rst (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3758">#3758</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Check for http protocol before urlize (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3755">#3755</a>)</li>
+<li><a class="reference external" href="http://github.com/rajujha373">&#64;rajujha373</a>: #3741: replaced Go Crazy text with Search (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3752">#3752</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Log in the proper place and add the image name used (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3750">#3750</a>)</li>
+<li><a class="reference external" href="http://github.com/shubham76">&#64;shubham76</a>: Changed ‘Submit’ text on buttons with something more meaningful (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3749">#3749</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Fix tests for Git submodule (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3737">#3737</a>)</li>
+<li><a class="reference external" href="http://github.com/bansalnitish">&#64;bansalnitish</a>: Add eslint rules and fix errors (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3726">#3726</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Prevent bots indexing promos (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3719">#3719</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Add argument to skip errorlist through knockout on common form (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3704">#3704</a>)</li>
+<li><a class="reference external" href="http://github.com/ajatprabha">&#64;ajatprabha</a>: Fixed #3701: added closing tag for div element (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3702">#3702</a>)</li>
+<li><a class="reference external" href="http://github.com/bansalnitish">&#64;bansalnitish</a>: Fixes internal reference (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3695">#3695</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Always record the git branch command as success (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3693">#3693</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Show the project slug in the project admin (to make it more explicit what project is what) (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3681">#3681</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Upgrade django-taggit to 0.22.2 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3667">#3667</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Check for submodules (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3661">#3661</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Hotfix for adding logging call back into project sync task (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3657">#3657</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Fix issue with missing setting in oauth SyncRepo task (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3656">#3656</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Remove error logging that isn’t an error. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3650">#3650</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Project updated when subproject modified (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3649">#3649</a>)</li>
+<li><a class="reference external" href="http://github.com/aasis21">&#64;aasis21</a>: formatting buttons in edit project text editor (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3633">#3633</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Filter by my own repositories at Import Remote Project (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3548">#3548</a>)</li>
+<li><a class="reference external" href="http://github.com/funkyHat">&#64;funkyHat</a>: check for matching alias before subproject slug (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/2787">#2787</a>)</li>
+</ul>
+</div>
+<div class="section" id="version-2-2-1">
+<h2>Version 2.2.1<a class="headerlink" href="#version-2-2-1" title="Permalink to this headline">¶</a></h2>
+<p>Version <code class="docutils literal notranslate"><span class="pre">2.2.1</span></code> is a bug fix release for the several issues found in
+production during the <code class="docutils literal notranslate"><span class="pre">2.2.0</span></code> release.</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Hotfix for adding logging call back into project sync task (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3657">#3657</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Fix issue with missing setting in oauth SyncRepo task (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3656">#3656</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Tests for build notifications (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3654">#3654</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Send proper context to celery email notification task (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3653">#3653</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Remove error logging that isn’t an error. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3650">#3650</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Update RTD security docs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3641">#3641</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Ability to override the creation of the Celery App (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3623">#3623</a>)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="version-2-2-0">
+<h2>Version 2.2.0<a class="headerlink" href="#version-2-2-0" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Tests for build notifications (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3654">#3654</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Send proper context to celery email notification task (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3653">#3653</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: Update django-formtools to 2.1 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3648">#3648</a>)</li>
+<li><a class="reference external" href="http://github.com/xrmx">&#64;xrmx</a>: Update Django to 1.9.13 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3647">#3647</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fix a 500 when searching for files with API v1 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3645">#3645</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Update RTD security docs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3641">#3641</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Fix SVN initialization for command logging (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3638">#3638</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Ability to override the creation of the Celery App (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3623">#3623</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Update the operations team (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3621">#3621</a>)</li>
+<li><a class="reference external" href="http://github.com/mohitkyadav">&#64;mohitkyadav</a>: Add venv to .gitignore (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3620">#3620</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Remove hardcoded copyright year (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3616">#3616</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Improve installation steps (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3614">#3614</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Update GSOC (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3607">#3607</a>)</li>
+<li><a class="reference external" href="http://github.com/Jigar3">&#64;Jigar3</a>: Updated AUTHORS.rst (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3601">#3601</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Pin less to latest compatible version (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3597">#3597</a>)</li>
+<li><a class="reference external" href="http://github.com/Angeles4four">&#64;Angeles4four</a>: Grammar correction (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3596">#3596</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fix an unclosed tag (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3592">#3592</a>)</li>
+<li><a class="reference external" href="http://github.com/aaksarin">&#64;aaksarin</a>: add missed fontawesome-webfont.woff2 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3589">#3589</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Force a specific ad to be displayed (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3584">#3584</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Docs about preference for tags over branches (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3582">#3582</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Rework homepage (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3579">#3579</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Don’t allow to create a subproject of a project itself  (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3571">#3571</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Fix for build screen in firefox (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3569">#3569</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Style using pre-commit (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3560">#3560</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Use DRF 3.1 <code class="xref py py-obj docutils literal notranslate"><span class="pre">pagination_class</span></code> (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3559">#3559</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Analytics fixes (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3558">#3558</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Upgrade requests version (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3557">#3557</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Mount <code class="xref py py-obj docutils literal notranslate"><span class="pre">pip_cache_path</span></code> in Docker container (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3556">#3556</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Add a number of new ideas for GSOC (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3552">#3552</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Fix Travis lint issue (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3551">#3551</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Send custom dimensions for mkdocs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3550">#3550</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Promo contrast improvements (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3549">#3549</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Allow git tags with <code class="xref py py-obj docutils literal notranslate"><span class="pre">/</span></code> in the name and properly slugify (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3545">#3545</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Allow to import public repositories on corporate site (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3537">#3537</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Log <code class="xref py py-obj docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> and expose to users (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3520">#3520</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Update docs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3498">#3498</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Switch to universal analytics (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3495">#3495</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Move Mercurial dependency to pip.txt (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3488">#3488</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Add docs on removing edit button (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3479">#3479</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Convert default dev cache to local memory (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3477">#3477</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Fix lint error (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3402">#3402</a>)</li>
+<li><a class="reference external" href="http://github.com/techtonik">&#64;techtonik</a>: Fix Edit links if version is referenced by annotated tag (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3302">#3302</a>)</li>
+<li><a class="reference external" href="http://github.com/jaraco">&#64;jaraco</a>: Fixed build results page on firefox (part two) (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/2630">#2630</a>)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="version-2-1-6">
+<h2>Version 2.1.6<a class="headerlink" href="#version-2-1-6" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Promo contrast improvements (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3549">#3549</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Refactor run command outside a Build and Environment (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3542">#3542</a>)</li>
+<li><a class="reference external" href="http://github.com/AnatoliyURL">&#64;AnatoliyURL</a>: Project in the local read the docs don’t see tags. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3534">#3534</a>)</li>
+<li><a class="reference external" href="http://github.com/malarzm">&#64;malarzm</a>: searchtools.js missing init() call (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3532">#3532</a>)</li>
+<li><a class="reference external" href="http://github.com/johanneskoester">&#64;johanneskoester</a>: Build failed without details (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3531">#3531</a>)</li>
+<li><a class="reference external" href="http://github.com/danielmitterdorfer">&#64;danielmitterdorfer</a>: “Edit on Github” points to non-existing commit (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3530">#3530</a>)</li>
+<li><a class="reference external" href="http://github.com/lk-geimfari">&#64;lk-geimfari</a>: No such file or directory: ‘docs/requirements.txt’ (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3529">#3529</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix Good First Issue link (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3522">#3522</a>)</li>
+<li><a class="reference external" href="http://github.com/Blendify">&#64;Blendify</a>: Remove RTD Theme workaround (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3519">#3519</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Move project description to the top (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3510">#3510</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Switch to universal analytics (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3495">#3495</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Convert default dev cache to local memory (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3477">#3477</a>)</li>
+<li><a class="reference external" href="http://github.com/nlgranger">&#64;nlgranger</a>: Github service: cannot unlink after deleting account (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3374">#3374</a>)</li>
+<li><a class="reference external" href="http://github.com/andrewgodwin">&#64;andrewgodwin</a>: “stable” appearing to track future release branches (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3268">#3268</a>)</li>
+<li><a class="reference external" href="http://github.com/skddc">&#64;skddc</a>: Add JSDoc to docs build environment (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3069">#3069</a>)</li>
+<li><a class="reference external" href="http://github.com/chummels">&#64;chummels</a>: RTD building old “stable” docs instead of “latest” when auto-triggered from recent push (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/2351">#2351</a>)</li>
+<li><a class="reference external" href="http://github.com/cajus">&#64;cajus</a>: Builds get stuck in “Cloning” state (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/2047">#2047</a>)</li>
+<li><a class="reference external" href="http://github.com/gossi">&#64;gossi</a>: Cannot delete subproject (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/1341">#1341</a>)</li>
+<li><a class="reference external" href="http://github.com/gigster99">&#64;gigster99</a>: extension problem (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/1059">#1059</a>)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="version-2-1-5">
+<h2>Version 2.1.5<a class="headerlink" href="#version-2-1-5" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Add GSOC 2018 page (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3518">#3518</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Move project description to the top (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3510">#3510</a>)</li>
+<li><a class="reference external" href="http://github.com/RichardLitt">&#64;RichardLitt</a>: Docs: Rename “Good First Bug” to “Good First Issue” (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3505">#3505</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix regex for getting project and user (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3501">#3501</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Check to make sure changes exist in BitBucket pushes (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3480">#3480</a>)</li>
+<li><a class="reference external" href="http://github.com/andrewgodwin">&#64;andrewgodwin</a>: “stable” appearing to track future release branches (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3268">#3268</a>)</li>
+<li><a class="reference external" href="http://github.com/cdeil">&#64;cdeil</a>: No module named pip in conda build (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/2827">#2827</a>)</li>
+<li><a class="reference external" href="http://github.com/Yaseenh">&#64;Yaseenh</a>: building project does not generate new pdf with changes in it (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/2758">#2758</a>)</li>
+<li><a class="reference external" href="http://github.com/chummels">&#64;chummels</a>: RTD building old “stable” docs instead of “latest” when auto-triggered from recent push (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/2351">#2351</a>)</li>
+<li><a class="reference external" href="http://github.com/KeithWoods">&#64;KeithWoods</a>: GitHub edit link is aggressively stripped (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/1788">#1788</a>)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="version-2-1-4">
+<h2>Version 2.1.4<a class="headerlink" href="#version-2-1-4" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Add programming language to API/READTHEDOCS_DATA (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3499">#3499</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Remove our mkdocs search override (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3496">#3496</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Better style (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3494">#3494</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Update README.rst (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3492">#3492</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Small formatting change to the Alabaster footer (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3491">#3491</a>)</li>
+<li><a class="reference external" href="http://github.com/matsen">&#64;matsen</a>: Fixing “reseting” misspelling. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3487">#3487</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Add David to dev team listing (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3485">#3485</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Check to make sure changes exist in BitBucket pushes (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3480">#3480</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Use semvar for readthedocs-build to make bumping easier (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3475">#3475</a>)</li>
+<li><a class="reference external" href="http://github.com/davidfischer">&#64;davidfischer</a>: Add programming languages (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3471">#3471</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Remove TEMPLATE_LOADERS since it’s the default (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3469">#3469</a>)</li>
+<li><a class="reference external" href="http://github.com/Code0x58">&#64;Code0x58</a>: Minor virtualenv upgrade (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3463">#3463</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Remove invite only message (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3456">#3456</a>)</li>
+<li><a class="reference external" href="http://github.com/maxirus">&#64;maxirus</a>: Adding to Install Docs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3455">#3455</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Fix a little typo (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3448">#3448</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Better autogenerated index file (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3447">#3447</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Better help text for privacy level (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3444">#3444</a>)</li>
+<li><a class="reference external" href="http://github.com/msyriac">&#64;msyriac</a>: Broken link URL changed fixes #3442 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3443">#3443</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Fix git (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3441">#3441</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Properly slugify the alias on Project Relationships. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3440">#3440</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Don’t show “build ideas” to unprivileged users (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3439">#3439</a>)</li>
+<li><a class="reference external" href="http://github.com/Blendify">&#64;Blendify</a>: Docs: Point Theme docs to new website (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3438">#3438</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Do not use double quotes on git command with –format option (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3437">#3437</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Hack in a fix for missing version slug deploy that went out a while back (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3433">#3433</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Check versions used to create the venv and auto-wipe (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3432">#3432</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Upgrade psycopg2 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3429">#3429</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Fix “Edit in Github” link (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3427">#3427</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Add celery theme to supported ad options (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3425">#3425</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Link to version detail page from build detail page (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3418">#3418</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Move wipe button to version detail page (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3417">#3417</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Show/Hide “See paid advertising” checkbox depending on USE_PROMOS (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3412">#3412</a>)</li>
+<li><a class="reference external" href="http://github.com/benjaoming">&#64;benjaoming</a>: Strip well-known version component origin/ from remote version (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3377">#3377</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Remove warnings from code (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3372">#3372</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Add docker image from the YAML config integration (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3339">#3339</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Show proper error to user when conf.py is not found (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3326">#3326</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Simple task to finish inactive builds (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3312">#3312</a>)</li>
+<li><a class="reference external" href="http://github.com/techtonik">&#64;techtonik</a>: Fix Edit links if version is referenced by annotated tag (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3302">#3302</a>)</li>
+<li><a class="reference external" href="http://github.com/Riyuzakii">&#64;Riyuzakii</a>: changed &lt;strong&gt; from html to css (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/2699">#2699</a>)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="version-2-1-3">
+<h2>Version 2.1.3<a class="headerlink" href="#version-2-1-3" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body"><p class="first">Dec 21, 2017</p>
+<ul class="last simple">
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Upgrade psycopg2 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3429">#3429</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Fix “Edit in Github” link (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3427">#3427</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Add celery theme to supported ad options (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3425">#3425</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Only build travis push builds on master. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3421">#3421</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Add concept of dashboard analytics code (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3420">#3420</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Use default avatar for User/Orgs in OAuth services (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3419">#3419</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Link to version detail page from build detail page (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3418">#3418</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Move wipe button to version detail page (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3417">#3417</a>)</li>
+<li><a class="reference external" href="http://github.com/bieagrathara">&#64;bieagrathara</a>: 019 497 8360 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3416">#3416</a>)</li>
+<li><a class="reference external" href="http://github.com/bieagrathara">&#64;bieagrathara</a>: rew (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3415">#3415</a>)</li>
+<li><a class="reference external" href="http://github.com/tony">&#64;tony</a>: lint prospector task failing (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3414">#3414</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Remove extra ‘s’ (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3413">#3413</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Show/Hide “See paid advertising” checkbox depending on USE_PROMOS (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3412">#3412</a>)</li>
+<li><a class="reference external" href="http://github.com/accraze">&#64;accraze</a>: Removing talks about RTD page (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3410">#3410</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Pin pylint to 1.7.5 and fix docstring styling (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3408">#3408</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Update style and copy on abandonment docs (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3406">#3406</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Update changelog more consistently (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3405">#3405</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Update prerelease invoke command to call with explicit path (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3404">#3404</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Fix changelog command (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3403">#3403</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Fix lint error (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3402">#3402</a>)</li>
+<li><a class="reference external" href="http://github.com/julienmalard">&#64;julienmalard</a>: Recent builds are missing translated languages links (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3401">#3401</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Remove copyright application (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3400">#3400</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Show connect buttons for installed apps only (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3394">#3394</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Fix display of build advice (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3390">#3390</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Don’t display the build suggestions div if there are no suggestions (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3389">#3389</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Pass more data into the redirects. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3388">#3388</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Fix issue where you couldn’t edit your canonical domain. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3387">#3387</a>)</li>
+<li><a class="reference external" href="http://github.com/benjaoming">&#64;benjaoming</a>: Strip well-known version component origin/ from remote version (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3377">#3377</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Remove warnings from code (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3372">#3372</a>)</li>
+<li><a class="reference external" href="http://github.com/JavaDevVictoria">&#64;JavaDevVictoria</a>: Updated python.setup_py_install to be true (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3357">#3357</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Use default avatars for GitLab/GitHub/Bitbucket integrations (users/organizations) (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3353">#3353</a>)</li>
+<li><a class="reference external" href="http://github.com/jonrkarr">&#64;jonrkarr</a>: Error in YAML configuration docs: default value for <code class="xref py py-obj docutils literal notranslate"><span class="pre">python.setup_py_install</span></code> should be <code class="xref py py-obj docutils literal notranslate"><span class="pre">true</span></code> (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3334">#3334</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Show proper error to user when conf.py is not found (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3326">#3326</a>)</li>
+<li><a class="reference external" href="http://github.com/MikeHart85">&#64;MikeHart85</a>: Badges aren’t updating due to being cached on GitHub. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3323">#3323</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Simple task to finish inactive builds (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3312">#3312</a>)</li>
+<li><a class="reference external" href="http://github.com/techtonik">&#64;techtonik</a>: Fix Edit links if version is referenced by annotated tag (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3302">#3302</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Remove/Update talks about RTD page (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3283">#3283</a>)</li>
+<li><a class="reference external" href="http://github.com/gawel">&#64;gawel</a>: Regain pyquery project ownership (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3281">#3281</a>)</li>
+<li><a class="reference external" href="http://github.com/dialex">&#64;dialex</a>: Build passed but I can’t see the documentation (maze screen) (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3246">#3246</a>)</li>
+<li><a class="reference external" href="http://github.com/makixx">&#64;makixx</a>: Account is inactive (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3241">#3241</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Cleanup misreported failed builds (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3230">#3230</a>)</li>
+<li><a class="reference external" href="http://github.com/cokelaer">&#64;cokelaer</a>: links to github are broken (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3203">#3203</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Remove copyright application (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3199">#3199</a>)</li>
+<li><a class="reference external" href="http://github.com/shacharoo">&#64;shacharoo</a>: Unable to register after deleting my account (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3189">#3189</a>)</li>
+<li><a class="reference external" href="http://github.com/gtalarico">&#64;gtalarico</a>: 3 week old Build Stuck Cloning  (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3126">#3126</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Regressions with conf.py and error reporting (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/2963">#2963</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Can’t edit canonical domain (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/2922">#2922</a>)</li>
+<li><a class="reference external" href="http://github.com/virtuald">&#64;virtuald</a>: Documentation stuck in ‘cloning’ state (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/2795">#2795</a>)</li>
+<li><a class="reference external" href="http://github.com/Riyuzakii">&#64;Riyuzakii</a>: changed &lt;strong&gt; from html to css (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/2699">#2699</a>)</li>
+<li><a class="reference external" href="http://github.com/tjanez">&#64;tjanez</a>: Support specifying ‘python setup.py build_sphinx’ as an alternative build command (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/1857">#1857</a>)</li>
+<li><a class="reference external" href="http://github.com/bdarnell">&#64;bdarnell</a>: Broken edit links (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/1637">#1637</a>)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="version-2-1-2">
+<h2>Version 2.1.2<a class="headerlink" href="#version-2-1-2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Update changelog more consistently (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3405">#3405</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Update prerelease invoke command to call with explicit path (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3404">#3404</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Fix lint error (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3402">#3402</a>)</li>
+<li><a class="reference external" href="http://github.com/stsewd">&#64;stsewd</a>: Remove copyright application (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3400">#3400</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Show connect buttons for installed apps only (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3394">#3394</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Don’t display the build suggestions div if there are no suggestions (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3389">#3389</a>)</li>
+<li><a class="reference external" href="http://github.com/jonrkarr">&#64;jonrkarr</a>: Error in YAML configuration docs: default value for <code class="xref py py-obj docutils literal notranslate"><span class="pre">python.setup_py_install</span></code> should be <code class="xref py py-obj docutils literal notranslate"><span class="pre">true</span></code> (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3334">#3334</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Simple task to finish inactive builds (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3312">#3312</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Cleanup misreported failed builds (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3230">#3230</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Remove copyright application (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3199">#3199</a>)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="version-2-1-1">
+<h2>Version 2.1.1<a class="headerlink" href="#version-2-1-1" title="Permalink to this headline">¶</a></h2>
+<p>Release information missing</p>
+</div>
+<div class="section" id="version-2-1-0">
+<h2>Version 2.1.0<a class="headerlink" href="#version-2-1-0" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Revert “Merge pull request #3336 from rtfd/use-active-for-stable” (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3368">#3368</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Revert “Do not split before first argument (#3333)” (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3366">#3366</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Remove pitch from ethical ads page, point folks to actual pitch page. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3365">#3365</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Add changelog and changelog automation (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3364">#3364</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Fix mkdocs search. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3361">#3361</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Email sending: Allow kwargs for other options (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3355">#3355</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Try and get folks to put more tags. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3350">#3350</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Suggest wiping your environment to folks with bad build outcomes. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3347">#3347</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: GitLab Integration (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3327">#3327</a>)</li>
+<li><a class="reference external" href="http://github.com/jimfulton">&#64;jimfulton</a>: Draft policy for claiming existing project names. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3314">#3314</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: More logic changes to error reporting, cleanup (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3310">#3310</a>)</li>
+<li><a class="reference external" href="http://github.com/safwanrahman">&#64;safwanrahman</a>: [Fix #3182] Better user deletion (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3214">#3214</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Better User deletion (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3182">#3182</a>)</li>
+<li><a class="reference external" href="http://github.com/RichardLitt">&#64;RichardLitt</a>: Add <code class="xref py py-obj docutils literal notranslate"><span class="pre">Needed:</span> <span class="pre">replication</span></code> label (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3138">#3138</a>)</li>
+<li><a class="reference external" href="http://github.com/josejrobles">&#64;josejrobles</a>: Replaced usage of deprecated function get_fields_with_model with new … (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3052">#3052</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Don’t delete the subprojects directory on sync of superproject (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3042">#3042</a>)</li>
+<li><a class="reference external" href="http://github.com/andrew">&#64;andrew</a>: Pass query string when redirecting, fixes #2595 (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3001">#3001</a>)</li>
+<li><a class="reference external" href="http://github.com/saily">&#64;saily</a>: Add GitLab repo sync and webhook support (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/1870">#1870</a>)</li>
+<li><a class="reference external" href="http://github.com/destroyerofbuilds">&#64;destroyerofbuilds</a>: Setup GitLab Web Hook on Project Import (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/1443">#1443</a>)</li>
+<li><a class="reference external" href="http://github.com/takotuesday">&#64;takotuesday</a>: Add GitLab Provider from django-allauth (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/1441">#1441</a>)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="version-2-0">
+<h2>Version 2.0<a class="headerlink" href="#version-2-0" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Email sending: Allow kwargs for other options (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3355">#3355</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Try and get folks to put more tags. (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3350">#3350</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Small changes to email sending to enable from email (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3349">#3349</a>)</li>
+<li><a class="reference external" href="http://github.com/dplanella">&#64;dplanella</a>: Duplicate TOC entries (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3345">#3345</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Small tweaks to ethical ads page (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3344">#3344</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Fix python usage around oauth pagination (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3342">#3342</a>)</li>
+<li><a class="reference external" href="http://github.com/tony">&#64;tony</a>: Fix isort link (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3340">#3340</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Change stable version switching to respect <code class="xref py py-obj docutils literal notranslate"><span class="pre">active</span></code> (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3336">#3336</a>)</li>
+<li><a class="reference external" href="http://github.com/ericholscher">&#64;ericholscher</a>: Allow superusers to pass admin &amp; member tests for projects (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3335">#3335</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Do not split before first argument (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3333">#3333</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Update docs for pre-commit (auto linting) (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3332">#3332</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Take preferece of tags over branches when selecting the stable version (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3331">#3331</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Add prospector as a pre-commit hook (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3328">#3328</a>)</li>
+<li><a class="reference external" href="http://github.com/andrewgodwin">&#64;andrewgodwin</a>: “stable” appearing to track future release branches (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3268">#3268</a>)</li>
+<li><a class="reference external" href="http://github.com/humitos">&#64;humitos</a>: Config files for auto linting (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/pull/3264">#3264</a>)</li>
+<li><a class="reference external" href="http://github.com/mekrip">&#64;mekrip</a>: Build is not working (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3223">#3223</a>)</li>
+<li><a class="reference external" href="http://github.com/skddc">&#64;skddc</a>: Add JSDoc to docs build environment (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/3069">#3069</a>)</li>
+<li><a class="reference external" href="http://github.com/jakirkham">&#64;jakirkham</a>: Specifying conda version used (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/2076">#2076</a>)</li>
+<li><a class="reference external" href="http://github.com/agjohnson">&#64;agjohnson</a>: Document code style guidelines (<a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues/1475">#1475</a>)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="previous-releases">
+<h2>Previous releases<a class="headerlink" href="#previous-releases" title="Permalink to this headline">¶</a></h2>
+<p>Starting with version <code class="docutils literal notranslate"><span class="pre">2.0</span></code>, we will be incrementing the Read the Docs version
+based on semantic versioning principles, and will be automating the update of
+our changelog.</p>
+<p>Below are some historical changes from when we have tried to add information
+here in the past</p>
+<div class="section" id="july-23-2015">
+<h3>July 23, 2015<a class="headerlink" href="#july-23-2015" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Django 1.8 Support Merged</li>
+</ul>
+<div class="section" id="code-notes">
+<h4>Code Notes<a class="headerlink" href="#code-notes" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Updated Django from <code class="xref py py-obj docutils literal notranslate"><span class="pre">1.6.11</span></code> to <code class="xref py py-obj docutils literal notranslate"><span class="pre">1.8.3</span></code>.</li>
+<li>Removed South and ported the South migrations to Django’s migration framework.</li>
+<li>Updated django-celery from <code class="xref py py-obj docutils literal notranslate"><span class="pre">3.0.23</span></code> to <code class="xref py py-obj docutils literal notranslate"><span class="pre">3.1.26</span></code> as django-celery 3.0.x does not support Django 1.8.</li>
+<li>Updated Celery from <code class="xref py py-obj docutils literal notranslate"><span class="pre">3.0.24</span></code> to <code class="xref py py-obj docutils literal notranslate"><span class="pre">3.1.18</span></code> because we had to update django-celery. We need to test this extensively and might need to think about using the new Celery API directly and dropping django-celery. See release notes: <a class="reference external" href="http://docs.celeryproject.org/en/latest/whatsnew-3.1.html">http://docs.celeryproject.org/en/latest/whatsnew-3.1.html</a></li>
+<li>Updated tastypie from <code class="xref py py-obj docutils literal notranslate"><span class="pre">0.11.1</span></code> to current master (commit <code class="xref py py-obj docutils literal notranslate"><span class="pre">1e1aff3dd4dcd21669e9c68bd7681253b286b856</span></code>) as 0.11.x is not compatible with Django 1.8. No surprises expected but we should ask for a proper release, see release notes: <a class="reference external" href="https://github.com/django-tastypie/django-tastypie/blob/master/docs/release_notes/v0.12.0.rst">https://github.com/django-tastypie/django-tastypie/blob/master/docs/release_notes/v0.12.0.rst</a></li>
+<li>Updated django-oauth from <code class="xref py py-obj docutils literal notranslate"><span class="pre">0.16.1</span></code> to <code class="xref py py-obj docutils literal notranslate"><span class="pre">0.21.0</span></code>. No surprises expected, see release notes <a class="reference external" href="https://django-allauth.readthedocs.org/en/latest/changelog.html">in the docs</a> and <a class="reference external" href="https://github.com/pennersr/django-allauth/blob/9123223f167959e4e5c4074408db068f725559d1/ChangeLog#L1-169">finer grained in the repo</a></li>
+<li>Updated django-guardian from <code class="xref py py-obj docutils literal notranslate"><span class="pre">1.2.0</span></code> to <code class="xref py py-obj docutils literal notranslate"><span class="pre">1.3.0</span></code> to gain Django 1.8 support. No surprises expected, see release notes: <a class="reference external" href="https://github.com/lukaszb/django-guardian/blob/devel/CHANGES">https://github.com/lukaszb/django-guardian/blob/devel/CHANGES</a></li>
+<li>Using <code class="xref py py-obj docutils literal notranslate"><span class="pre">django-formtools</span></code> instead of removed <code class="xref py py-obj docutils literal notranslate"><span class="pre">django.contrib.formtools</span></code> now. Based on the Django release notes, these modules are the same except of the package name.</li>
+<li>Updated pytest-django from <code class="xref py py-obj docutils literal notranslate"><span class="pre">2.6.2</span></code> to <code class="xref py py-obj docutils literal notranslate"><span class="pre">2.8.0</span></code>. No tests required, but running the testsuite :smile:</li>
+<li>Updated psycopg2 from 2.4 to 2.4.6 as 2.4.5 is required by Django 1.8. No trouble expected as Django is the layer between us and psycopg2. Also it’s only a minor version upgrade. Release notes: <a class="reference external" href="http://initd.org/psycopg/docs/news.html#what-s-new-in-psycopg-2-4-6">http://initd.org/psycopg/docs/news.html#what-s-new-in-psycopg-2-4-6</a></li>
+<li>Added <code class="xref py py-obj docutils literal notranslate"><span class="pre">django.setup()</span></code> to <code class="xref py py-obj docutils literal notranslate"><span class="pre">conf.py</span></code> to load django properly for doc builds.</li>
+<li>Added migrations for all apps with models in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">readthedocs/</span></code> directory</li>
+</ul>
+</div>
+<div class="section" id="deployment-notes">
+<h4>Deployment Notes<a class="headerlink" href="#deployment-notes" title="Permalink to this headline">¶</a></h4>
+<p>After you have updated the code and installed the new dependencies, you need to run these commands on the server:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span> <span class="n">contenttypes</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span> <span class="n">projects</span> <span class="mi">0002</span> <span class="o">--</span><span class="n">fake</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span> <span class="o">--</span><span class="n">fake</span><span class="o">-</span><span class="n">initial</span>
+</pre></div>
+</div>
+<p>Locally I had trouble in a test environment that pip did not update to the specified commit of tastypie. It might be required to use <code class="xref py py-obj docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">-r</span> <span class="pre">requirements/deploy.txt</span></code> during deployment.</p>
+</div>
+<div class="section" id="development-update-notes">
+<h4>Development Update Notes<a class="headerlink" href="#development-update-notes" title="Permalink to this headline">¶</a></h4>
+<p>The readthedocs developers need to execute these commands when switching to this branch (or when this got merged into master):</p>
+<ul>
+<li><p class="first"><strong>Before updating</strong> please make sure that all migrations are applied:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">syncdb</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Update the codebase: <code class="xref py py-obj docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></p>
+</li>
+<li><p class="first">You need to update the requirements with <code class="xref py py-obj docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p>
+</li>
+<li><p class="first">Now you need to fake the initial migrations:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span> <span class="n">contenttypes</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span> <span class="n">projects</span> <span class="mi">0002</span> <span class="o">--</span><span class="n">fake</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span> <span class="o">--</span><span class="n">fake</span><span class="o">-</span><span class="n">initial</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="features/embed.html" class="btn btn-neutral" title="Content Embedding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2010-2018, Read the Docs, Inc &amp; contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

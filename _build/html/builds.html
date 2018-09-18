@@ -1,0 +1,538 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Build Process &mdash; Read the Docs 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Read the Docs features" href="features.html" />
+    <link rel="prev" title="Versions" href="versions.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versions.html">Versions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Build Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-we-build-documentation">How we build documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sphinx">Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mkdocs">MkDocs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-what-s-going-on">Understanding what’s going on</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#builder-responsibility">Builder responsibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-build-environment">The build environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stable">2.0 (stable)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#latest">3.0 (latest)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-your-own-builder">Writing your own builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deleting-a-stale-or-broken-build-environment">Deleting a stale or broken build environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-environment">Build environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Read the Docs features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yaml-config.html">Read the Docs YAML Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">Public API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="embed.html">Embed API</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About Read the Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contributing to Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="team.html">Read the Docs Team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-of-conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advertising/index.html">Advertising</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sponsors.html">Sponsors of Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open-source-philosophy.html">Read the Docs Open Source Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="story.html">The Story of Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="abandoned-projects.html">Policy for Abandoned Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dmca/index.html">DMCA Takedown Policy</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Feature Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="webhooks.html">Webhooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="badges.html">Badges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alternate_domains.html">Alternate Domains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="localization.html">Localization of Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vcs.html">Version Control System Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subprojects.html">Subprojects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conda.html">Conda Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="canonical.html">Canonical URLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="single_version.html">Single Version Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="privacy.html">Privacy Levels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-defined-redirects.html">User-defined Redirects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automatic-redirects.html">Automatic Redirects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features/embed.html">Content Embedding</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Building and Contributing to Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/standards.html">Front End Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/buildenvironments.html">Build Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="symlinks.html">How we use symlinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Interesting Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="i18n.html">Internationalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="issue-labels.html">Overview of issue labels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Business Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="business/index.html">Read the Docs Business Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Custom Install Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="custom_installs/index.html">Info about custom installs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Designer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Designing Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/">Theme</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Read the Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Build Process</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/builds.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="build-process">
+<h1>Build Process<a class="headerlink" href="#build-process" title="Permalink to this headline">¶</a></h1>
+<p>Files: <a class="reference external" href="https://github.com/rtfd/readthedocs.org/blob/master/readthedocs/projects/tasks.py">tasks.py</a> - <a class="reference external" href="https://github.com/rtfd/readthedocs.org/tree/master/readthedocs/doc_builder">doc_builder/</a></p>
+<p>Every documentation build has limited resources.
+Our current build limits are:</p>
+<ul class="simple">
+<li>15 minutes</li>
+<li>1GB of memory</li>
+</ul>
+<p>We can increase build limits on a per-project basis,
+if you provide a good reason your documentation needs more resources.</p>
+<p>You can see the current Docker build images that we use in our <a class="reference external" href="https://github.com/rtfd/readthedocs-docker-images">docker repository</a>.
+<a class="reference external" href="https://hub.docker.com/r/readthedocs/build/">Docker Hub</a> also shows the latest set of images that have been built.</p>
+<p>Currently in production we’re using the <code class="docutils literal notranslate"><span class="pre">readthedocs/build:2.0</span></code> docker image as our default image.</p>
+<div class="section" id="how-we-build-documentation">
+<h2>How we build documentation<a class="headerlink" href="#how-we-build-documentation" title="Permalink to this headline">¶</a></h2>
+<p>When we import your documentation, we look at two things first: your <em>Repository URL</em> and the <em>Documentation Type</em>.
+We will clone your repository,
+and then build your documentation using the <em>Documentation Type</em> specified.</p>
+<div class="section" id="sphinx">
+<h3>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h3>
+<p>When you choose <em>Sphinx</em> as your <em>Documentation Type</em>,
+we will first look for a <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file in your repository.
+If we don’t find one,
+we will generate one for you.
+We will look inside a <code class="docutils literal notranslate"><span class="pre">doc</span></code> or <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory first,
+and then look within your entire project.</p>
+<p>Then Sphinx will build any files with an <code class="docutils literal notranslate"><span class="pre">.rst</span></code> extension.</p>
+</div>
+<div class="section" id="mkdocs">
+<h3>MkDocs<a class="headerlink" href="#mkdocs" title="Permalink to this headline">¶</a></h3>
+<p>When you choose <em>Mkdocs</em> as your <em>Documentation Type</em>,
+we will first look for a <code class="docutils literal notranslate"><span class="pre">mkdocs.yml</span></code> file in the root of your repository.
+If we don’t find one,
+we will generate one for you.</p>
+<p>Then MkDocs will build any files with a <code class="docutils literal notranslate"><span class="pre">.md</span></code> extension within the directory specifed as <code class="docutils literal notranslate"><span class="pre">docs_dir</span></code> in the <code class="docutils literal notranslate"><span class="pre">mkdocs.yml</span></code>.</p>
+<p>If no <code class="docutils literal notranslate"><span class="pre">mkdocs.yml</span></code> was found in the root of your repository and we generated one for you,
+Read the Docs will attempt to set <code class="docutils literal notranslate"><span class="pre">docs_dir</span></code> by sequentially searching for a  <code class="docutils literal notranslate"><span class="pre">docs</span></code>, <code class="docutils literal notranslate"><span class="pre">doc</span></code>, <code class="docutils literal notranslate"><span class="pre">Doc</span></code>, or <code class="docutils literal notranslate"><span class="pre">book</span></code> directory.
+The first of these directories that exists and contains files with a <code class="docutils literal notranslate"><span class="pre">.md</span></code> extension will be set to <code class="docutils literal notranslate"><span class="pre">docs_dir</span></code> within <code class="docutils literal notranslate"><span class="pre">mkdocs.yml</span></code>,
+and MkDocs will build the <code class="docutils literal notranslate"><span class="pre">.md</span></code> files in that directory.
+As MkDocs doesn’t support automatic PDF generation,
+Read the Docs cannot create a PDF version of your documentation with the <em>Mkdocs</em> option.</p>
+</div>
+</div>
+<div class="section" id="understanding-what-s-going-on">
+<h2>Understanding what’s going on<a class="headerlink" href="#understanding-what-s-going-on" title="Permalink to this headline">¶</a></h2>
+<p>Understanding how Read the Docs builds your project will help you with debugging the problems you have with the site.
+It should also allow you to take advantage of certain things that happen during the build process.</p>
+<p>The first step of the process is that we check out your code from the repository you have given us.
+If the code is already checked out, we update the copy to the branch that you have specified in your projects configuration.</p>
+<p>Then we build the proper backend code for the type of documentation you’ve selected.</p>
+<p>If you have the <em>Install Project</em> option enabled, we will run <code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">install</span></code> on your package, installing it into a virtual environment.
+You can also define additional packages to install with the <em>Requirements File</em> option.</p>
+<p>When we build your Sphinx documentation, we run <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-b</span> <span class="pre">html</span> <span class="pre">.</span> <span class="pre">_build/html</span></code>,
+where <code class="docutils literal notranslate"><span class="pre">html</span></code> would be replaced with the correct backend.
+We also create pdf’s and ePub’s automatically based on your project.
+For MkDocs, we run <code class="docutils literal notranslate"><span class="pre">mkdocs</span> <span class="pre">build</span></code>.</p>
+<p>Then these files are copied across to our application servers from the build server.
+Once on the application servers, they are served from nginx.</p>
+<p>An example in code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">update_docs_from_vcs</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="s1">&#39;setup.py&#39;</span><span class="p">):</span>
+    <span class="n">run</span><span class="p">(</span><span class="s1">&#39;python setup.py install&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">project</span><span class="o">.</span><span class="n">requirements_file</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">(</span><span class="s1">&#39;pip install -r </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">project</span><span class="o">.</span><span class="n">requirements_file</span><span class="p">)</span>
+<span class="n">build_docs</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="n">version</span><span class="p">)</span>
+<span class="n">copy_files</span><span class="p">(</span><span class="n">artifact_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Regardless of whether you build your docs with Sphinx or MkDocs,
+we recommend you pin the version of Sphinx or Mkdocs you want us to use.
+You can do this the same way other
+<a class="reference internal" href="guides/specifying-dependencies.html"><span class="doc">dependencies are specified</span></a>.
+Some examples of pinning versions might be <code class="docutils literal notranslate"><span class="pre">sphinx&lt;2.0</span></code> or <code class="docutils literal notranslate"><span class="pre">mkdocs&gt;=1.0</span></code>.</p>
+</div>
+</div>
+<div class="section" id="builder-responsibility">
+<h2>Builder responsibility<a class="headerlink" href="#builder-responsibility" title="Permalink to this headline">¶</a></h2>
+<p>Builders have a very specific job.
+They take the updated source code and generate the correct artifacts.
+The code lives in <code class="docutils literal notranslate"><span class="pre">self.version.project.checkout_path(self.version.slug)</span></code>.
+The artifacts should end up in <code class="docutils literal notranslate"><span class="pre">self.version.project.artifact_path(version=self.version.slug,</span> <span class="pre">type=self.type)</span></code>
+Where <code class="docutils literal notranslate"><span class="pre">type</span></code> is the name of your builder.
+All files that end up in the artifact directory should be in their final form.</p>
+</div>
+<div class="section" id="the-build-environment">
+<h2>The build environment<a class="headerlink" href="#the-build-environment" title="Permalink to this headline">¶</a></h2>
+<p>The build process is executed inside Docker containers,
+by default the image used is <code class="docutils literal notranslate"><span class="pre">readthedocs/build:2.0</span></code>,
+but you can change that using a <a class="reference internal" href="yaml-config.html"><span class="doc">configuration file</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Docker images have a select number of C libraries installed,
+because they are used across a wide array of python projects.
+We can’t install every C library out there,
+but we try and support the major ones.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">If you want to know the specific version of a package that is installed in the image
+you can check the <a class="reference external" href="https://packages.ubuntu.com/">Ubuntu package search page</a>.</p>
+</div>
+<div class="section" id="stable">
+<h3>2.0 (stable)<a class="headerlink" href="#stable" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">O.S:</th><td class="field-body"><p class="first">Ubuntu 16.04</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Conda:</th><td class="field-body"><p class="first">Miniconda 4.3.31</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Python:</th><td class="field-body"><ul class="first simple">
+<li><code class="docutils literal notranslate"><span class="pre">m2crypto</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">matplolib</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">numpy</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">pandas</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">pip</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">scipy</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Other packages:</th><td class="field-body"><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">doxygen</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">graphviz</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">libevent</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">libjpeg</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">libxml2-dev</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">libxslt1.1</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">pandoc</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">textlive-full</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="https://github.com/rtfd/readthedocs-docker-images/blob/releases/2.x/Dockerfile">More details</a></p>
+</div>
+<div class="section" id="latest">
+<h3>3.0 (latest)<a class="headerlink" href="#latest" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">O.S:</th><td class="field-body"><p class="first">Ubuntu 16.04</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Conda:</th><td class="field-body"><p class="first">Miniconda 4.4.10</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Python:</th><td class="field-body"><ul class="first simple">
+<li><code class="docutils literal notranslate"><span class="pre">matplolib</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">numpy</span></code>,</li>
+<li><code class="docutils literal notranslate"><span class="pre">pandas</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">pip</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">scipy</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">JavaScript:</th><td class="field-body"><ul class="first simple">
+<li><code class="docutils literal notranslate"><span class="pre">jsdoc</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">nodejs</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">npm</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Other packages:</th><td class="field-body"><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">doxygen</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">libevent-dev</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">libgraphviz-dev</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">libjpeg</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">libxml2-dev</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">libxslt1-dev</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">pandoc</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">plantuml</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">textlive-full</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="https://github.com/rtfd/readthedocs-docker-images/blob/releases/3.x/Dockerfile">More details</a></p>
+</div>
+</div>
+<div class="section" id="writing-your-own-builder">
+<h2>Writing your own builder<a class="headerlink" href="#writing-your-own-builder" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Builds happen on a server using only the RTD Public API. There is no reason that you couldn’t build your own independent builder that wrote into the RTD namespace. The only thing that is currently unsupported there is a saner way than uploading the processed files as a zip.</p>
+</div>
+<p>The documentation build system in RTD is made pluggable, so that you can build out your own backend. If you have a documentation format that isn’t currently supported, you can add support by contributing a backend.</p>
+<p>The builders in <span class="xref std std-doc">/developer-interface/doc_builder</span> detail the higher level parts of the API that you need to implement. A basic run goes something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">backend</span> <span class="o">=</span> <span class="n">get_backend</span><span class="p">(</span><span class="n">project</span><span class="o">.</span><span class="n">documentation_type</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">force</span><span class="p">:</span>
+    <span class="n">backend</span><span class="o">.</span><span class="n">force</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+<span class="n">backend</span><span class="o">.</span><span class="n">clean</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+<span class="n">backend</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">success</span><span class="p">:</span>
+    <span class="n">backend</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="deleting-a-stale-or-broken-build-environment">
+<h2>Deleting a stale or broken build environment<a class="headerlink" href="#deleting-a-stale-or-broken-build-environment" title="Permalink to this headline">¶</a></h2>
+<p>If you’re having trouble getting your version to build, try wiping out the existing build/environment files.  On your version list page <code class="docutils literal notranslate"><span class="pre">/projects/[project]/versions</span></code> there is a “Wipe” button that will remove all of the files associated with your documentation build, but not the documentation itself.</p>
+</div>
+<div class="section" id="build-environment">
+<h2>Build environment<a class="headerlink" href="#build-environment" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Sphinx</em> and <em>Mkdocs</em> builders set the following RTD-specific environment variables when building your documentation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="52%" />
+<col width="23%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Environment variable</td>
+<td>Description</td>
+<td>Example value</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">READTHEDOCS</span></code></td>
+<td>Whether the build is running inside RTD</td>
+<td><code class="docutils literal notranslate"><span class="pre">True</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">READTHEDOCS_VERSION</span></code></td>
+<td>The RTD name of the version which is being built</td>
+<td><code class="docutils literal notranslate"><span class="pre">latest</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">READTHEDOCS_PROJECT</span></code></td>
+<td>The RTD name of the project which is being built</td>
+<td><code class="docutils literal notranslate"><span class="pre">myexampleproject</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="features.html" class="btn btn-neutral float-right" title="Read the Docs features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="versions.html" class="btn btn-neutral" title="Versions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2010-2018, Read the Docs, Inc &amp; contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

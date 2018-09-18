@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Version Control System Integration &mdash; Read the Docs 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Subprojects" href="subprojects.html" />
+    <link rel="prev" title="Localization of Documentation" href="localization.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versions.html">Versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builds.html">Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Read the Docs features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yaml-config.html">Read the Docs YAML Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">Public API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="embed.html">Embed API</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About Read the Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contributing to Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="team.html">Read the Docs Team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-of-conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advertising/index.html">Advertising</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sponsors.html">Sponsors of Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open-source-philosophy.html">Read the Docs Open Source Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="story.html">The Story of Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="abandoned-projects.html">Policy for Abandoned Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dmca/index.html">DMCA Takedown Policy</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Feature Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="webhooks.html">Webhooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="badges.html">Badges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alternate_domains.html">Alternate Domains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="localization.html">Localization of Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Version Control System Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#github">GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bitbucket">Bitbucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gitlab">Gitlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-variables">Additional variables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="subprojects.html">Subprojects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conda.html">Conda Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="canonical.html">Canonical URLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="single_version.html">Single Version Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="privacy.html">Privacy Levels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-defined-redirects.html">User-defined Redirects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automatic-redirects.html">Automatic Redirects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features/embed.html">Content Embedding</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Building and Contributing to Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/standards.html">Front End Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/buildenvironments.html">Build Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="symlinks.html">How we use symlinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Interesting Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="i18n.html">Internationalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="issue-labels.html">Overview of issue labels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Business Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="business/index.html">Read the Docs Business Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Custom Install Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="custom_installs/index.html">Info about custom installs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Designer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Designing Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/">Theme</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Read the Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Version Control System Integration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/vcs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="version-control-system-integration">
+<h1>Version Control System Integration<a class="headerlink" href="#version-control-system-integration" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We <a class="reference internal" href="design/theme-context.html"><span class="doc">plan to implement a new approach</span></a> regarding the Theme Context as a whole,
+although the VCS documentation page will still be valid, we prefer the users to move in that direction.</p>
+</div>
+<p>If you want to integrate editing into your own theme, you will have to declare
+few variables inside your configuration file <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> in the <code class="docutils literal notranslate"><span class="pre">'html_context'</span></code>
+setting, for the template to use them.</p>
+<p>More information can be found on <a class="reference external" href="http://www.sphinx-doc.org/en/1.5.2/config.html#confval-html_context">Sphinx documentation</a>.</p>
+<div class="section" id="github">
+<h2>GitHub<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
+<p>If you want to integrate GitHub, you can put the following snippet into
+your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;display_github&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="c1"># Integrate GitHub</span>
+    <span class="s2">&quot;github_user&quot;</span><span class="p">:</span> <span class="s2">&quot;MyUserName&quot;</span><span class="p">,</span> <span class="c1"># Username</span>
+    <span class="s2">&quot;github_repo&quot;</span><span class="p">:</span> <span class="s2">&quot;MyDoc&quot;</span><span class="p">,</span> <span class="c1"># Repo name</span>
+    <span class="s2">&quot;github_version&quot;</span><span class="p">:</span> <span class="s2">&quot;master&quot;</span><span class="p">,</span> <span class="c1"># Version</span>
+    <span class="s2">&quot;conf_py_path&quot;</span><span class="p">:</span> <span class="s2">&quot;/source/&quot;</span><span class="p">,</span> <span class="c1"># Path in the checkout to the docs root</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>It can be used like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">display_github</span> <span class="o">%</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://github.com/{{ github_user }}/{{ github_repo }}</span>
+    <span class="o">/</span><span class="n">blob</span><span class="o">/</span><span class="p">{{</span> <span class="n">github_version</span> <span class="p">}}{{</span> <span class="n">conf_py_path</span> <span class="p">}}{{</span> <span class="n">pagename</span> <span class="p">}}</span><span class="o">.</span><span class="n">rst</span><span class="s2">&quot;&gt;</span>
+    <span class="n">Show</span> <span class="n">on</span> <span class="n">GitHub</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bitbucket">
+<h2>Bitbucket<a class="headerlink" href="#bitbucket" title="Permalink to this headline">¶</a></h2>
+<p>If you want to integrate Bitbucket, you can put the following snippet into
+your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;display_bitbucket&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="c1"># Integrate Bitbucket</span>
+    <span class="s2">&quot;bitbucket_user&quot;</span><span class="p">:</span> <span class="s2">&quot;MyUserName&quot;</span><span class="p">,</span> <span class="c1"># Username</span>
+    <span class="s2">&quot;bitbucket_repo&quot;</span><span class="p">:</span> <span class="s2">&quot;MyDoc&quot;</span><span class="p">,</span> <span class="c1"># Repo name</span>
+    <span class="s2">&quot;bitbucket_version&quot;</span><span class="p">:</span> <span class="s2">&quot;master&quot;</span><span class="p">,</span> <span class="c1"># Version</span>
+    <span class="s2">&quot;conf_py_path&quot;</span><span class="p">:</span> <span class="s2">&quot;/source/&quot;</span><span class="p">,</span> <span class="c1"># Path in the checkout to the docs root</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>It can be used like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">display_bitbucket</span> <span class="o">%</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://bitbucket.org/{{ bitbucket_user }}/{{ bitbucket_repo }}</span>
+    <span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="p">{{</span> <span class="n">bitbucket_version</span><span class="p">}}{{</span> <span class="n">conf_py_path</span> <span class="p">}}{{</span> <span class="n">pagename</span> <span class="p">}}</span><span class="o">.</span><span class="n">rst</span><span class="s1">&#39;&quot;</span>
+    <span class="n">class</span><span class="o">=</span><span class="s2">&quot;icon icon-bitbucket&quot;</span><span class="o">&gt;</span> <span class="n">Edit</span> <span class="n">on</span> <span class="n">Bitbucket</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gitlab">
+<h2>Gitlab<a class="headerlink" href="#gitlab" title="Permalink to this headline">¶</a></h2>
+<p>If you want to integrate Gitlab, you can put the following snippet into
+your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;display_gitlab&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="c1"># Integrate Gitlab</span>
+    <span class="s2">&quot;gitlab_user&quot;</span><span class="p">:</span> <span class="s2">&quot;MyUserName&quot;</span><span class="p">,</span> <span class="c1"># Username</span>
+    <span class="s2">&quot;gitlab_repo&quot;</span><span class="p">:</span> <span class="s2">&quot;MyDoc&quot;</span><span class="p">,</span> <span class="c1"># Repo name</span>
+    <span class="s2">&quot;gitlab_version&quot;</span><span class="p">:</span> <span class="s2">&quot;master&quot;</span><span class="p">,</span> <span class="c1"># Version</span>
+    <span class="s2">&quot;conf_py_path&quot;</span><span class="p">:</span> <span class="s2">&quot;/source/&quot;</span><span class="p">,</span> <span class="c1"># Path in the checkout to the docs root</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>It can be used like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">display_gitlab</span> <span class="o">%</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://{{ gitlab_host|default(&quot;</span><span class="n">gitlab</span><span class="o">.</span><span class="n">com</span><span class="s2">&quot;) }}/</span>
+    <span class="p">{{</span> <span class="n">gitlab_user</span> <span class="p">}}</span><span class="o">/</span><span class="p">{{</span> <span class="n">gitlab_repo</span> <span class="p">}}</span><span class="o">/</span><span class="n">blob</span><span class="o">/</span><span class="p">{{</span> <span class="n">gitlab_version</span> <span class="p">}}</span>
+    <span class="p">{{</span> <span class="n">conf_py_path</span> <span class="p">}}{{</span> <span class="n">pagename</span> <span class="p">}}{{</span> <span class="n">suffix</span> <span class="p">}}</span><span class="s2">&quot; class=&quot;</span><span class="n">fa</span> <span class="n">fa</span><span class="o">-</span><span class="n">gitlab</span><span class="s2">&quot;&gt;</span>
+    <span class="n">Edit</span> <span class="n">on</span> <span class="n">GitLab</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="additional-variables">
+<h2>Additional variables<a class="headerlink" href="#additional-variables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">'pagename'</span></code> - Sphinx variable representing the name of the page you’re on.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="subprojects.html" class="btn btn-neutral float-right" title="Subprojects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="localization.html" class="btn btn-neutral" title="Localization of Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2010-2018, Read the Docs, Inc &amp; contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

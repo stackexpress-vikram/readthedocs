@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Google Summer of Code &mdash; Read the Docs 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Code of Conduct" href="code-of-conduct.html" />
+    <link rel="prev" title="Read the Docs Team" href="team.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versions.html">Versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builds.html">Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Read the Docs features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yaml-config.html">Read the Docs YAML Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guides/index.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">Public API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="embed.html">Embed API</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About Read the Docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contributing to Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="team.html">Read the Docs Team</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Google Summer of Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#skills">Skills</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mentors">Mentors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#want-to-get-involved">Want to get involved?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#project-ideas">Project Ideas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#refactor-improve-our-search-code">Refactor &amp; improve our search code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#finish-yaml-config">Finish YAML config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-v3">API V3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#improve-translation-workflow">Improve Translation Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#support-for-additional-build-steps-for-linting-testing">Support for additional build steps for linting &amp; testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#collections-of-projects">Collections of Projects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integrated-redirects">Integrated Redirects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-ideas">Additional Ideas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#thanks">Thanks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="code-of-conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advertising/index.html">Advertising</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sponsors.html">Sponsors of Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open-source-philosophy.html">Read the Docs Open Source Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="story.html">The Story of Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="abandoned-projects.html">Policy for Abandoned Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dmca/index.html">DMCA Takedown Policy</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Feature Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="webhooks.html">Webhooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="badges.html">Badges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alternate_domains.html">Alternate Domains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="localization.html">Localization of Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vcs.html">Version Control System Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subprojects.html">Subprojects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conda.html">Conda Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="canonical.html">Canonical URLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="single_version.html">Single Version Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="privacy.html">Privacy Levels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-defined-redirects.html">User-defined Redirects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automatic-redirects.html">Automatic Redirects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features/embed.html">Content Embedding</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Building and Contributing to Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/standards.html">Front End Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/buildenvironments.html">Build Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="symlinks.html">How we use symlinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Interesting Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="i18n.html">Internationalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="issue-labels.html">Overview of issue labels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Business Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="business/index.html">Read the Docs Business Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Custom Install Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="custom_installs/index.html">Info about custom installs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Designer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Designing Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/">Theme</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Read the Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Google Summer of Code</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/gsoc.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="google-summer-of-code">
+<h1>Google Summer of Code<a class="headerlink" href="#google-summer-of-code" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Thanks for your interest in Read the Docs!
+We are working hard to update the ideas list now that we are accepted in GSOC.
+Please give us a little while to work on things,
+and check back on this page for updates.</p>
+</div>
+<p>Read the Docs is participating in the Google Summer of Code in 2018.
+This page will contain all the information for students and anyone else interested in helping.</p>
+<div class="section" id="skills">
+<h2>Skills<a class="headerlink" href="#skills" title="Permalink to this headline">¶</a></h2>
+<p>Incoming students will need the following skills:</p>
+<ul class="simple">
+<li>Intermediate Python &amp; Django programming</li>
+<li>Familiarity with Markdown, reStructuredText, or some other plain text markup language</li>
+<li>Familiarity with git, or some other source control</li>
+<li>Ability to set up your own development environment for Read the Docs</li>
+<li>Basic understanding of web technologies (HTML/CSS/JS)</li>
+<li>An interest in documentation and improving open source documentation tools!</li>
+</ul>
+<p>We’re happy to help you get up to speed,
+but the more you are able to demonstrate ability in advance,
+the more likely we are to choose your application!</p>
+</div>
+<div class="section" id="mentors">
+<h2>Mentors<a class="headerlink" href="#mentors" title="Permalink to this headline">¶</a></h2>
+<p>Currently we have a few folks signed up:</p>
+<ul class="simple">
+<li>Eric Holscher</li>
+<li>Manuel Kaufmann</li>
+<li>Anthony Johnson</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Please do not reach out directly to anyone about the Summer of Code.
+It will <strong>not</strong> increase your chances of being accepted!</p>
+</div>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="install.html"><span class="doc">Installation</span></a> doc is probably the best place to get going.
+It will walk you through getting a basic environment for Read the Docs setup.</p>
+<p>Then you can look through our <a class="reference internal" href="contribute.html"><span class="doc">Contributing to Read the Docs</span></a> doc for information on how to get started contributing to RTD.</p>
+<p>People who have a history of submitting pull requests will be prioritized in our Summer of Code selection process.</p>
+</div>
+<div class="section" id="want-to-get-involved">
+<h2>Want to get involved?<a class="headerlink" href="#want-to-get-involved" title="Permalink to this headline">¶</a></h2>
+<p>If you’re interested in participating in GSoC as a student, you can apply during the normal process provided by Google. We are currently overwhelmed with interest, so we are not able to respond individually to each person who is interested.</p>
+</div>
+<div class="section" id="project-ideas">
+<h2>Project Ideas<a class="headerlink" href="#project-ideas" title="Permalink to this headline">¶</a></h2>
+<p>We have written our some loose ideas for projects to work on here.
+We are also open to any other ideas that students might have.</p>
+<p><strong>These projects are sorted by priority.</strong>
+We will consider the priority on our roadmap as a factor,
+along with the skill of the student,
+in our selection process.</p>
+<div class="section" id="refactor-improve-our-search-code">
+<h3>Refactor &amp; improve our search code<a class="headerlink" href="#refactor-improve-our-search-code" title="Permalink to this headline">¶</a></h3>
+<p>Currently we’re using a homegrown library for Elastic Search.
+There is a new <a class="reference external" href="http://elasticsearch-dsl.readthedocs.io/en/latest/">elasticsearch-dsl</a> library that we should be using.
+This project will include:</p>
+<ul class="simple">
+<li>Improving our search indexing</li>
+<li>Refactoring how we “model” our search data to use elasticsearch-dsl Models</li>
+<li>Add additional search data into our indexes, like the programming languages, type of document (tutorial, api, etc.) and other data for users to filter by</li>
+<li>(Optional) Improve the UX of the search for users in various ways</li>
+</ul>
+</div>
+<div class="section" id="finish-yaml-config">
+<h3>Finish YAML config<a class="headerlink" href="#finish-yaml-config" title="Permalink to this headline">¶</a></h3>
+<p>Currently we have a basic <a class="reference internal" href="yaml-config.html"><span class="doc">Read the Docs YAML Config</span></a> for Read the Docs.
+It’s still considered beta,
+and there are a number of features that it doesn’t support.
+We need to support everying users can currently do from our website dashboard inside the YAML file,
+and then plan a smooth transition path from the database UI to the YAML file.</p>
+<p>This is a <em>large</em> project and will likely require a good deal of understanding of both Python as well as web technologies.
+We have a <a class="reference external" href="https://github.com/rtfd/readthedocs.org/milestone/28">starting list of issues</a> put together,
+but there will be much more work.</p>
+</div>
+<div class="section" id="api-v3">
+<h3>API V3<a class="headerlink" href="#api-v3" title="Permalink to this headline">¶</a></h3>
+<p>We currently have a “v2” API that isn’t well documented and doesn’t allow users to write to it.
+We want to continue using Django REST Framework for this,
+but rethink how we’re presenting our information to our users.</p>
+<p>Currently we’re showing everything as simple “models”,
+and we want to start exposing “methods” on our data,
+similar to GitHub.</p>
+<p>This is a large project and should only be done by someone who has done some basic API design previously.</p>
+</div>
+<div class="section" id="improve-translation-workflow">
+<h3>Improve Translation Workflow<a class="headerlink" href="#improve-translation-workflow" title="Permalink to this headline">¶</a></h3>
+<p>Currently we have our documentation &amp; website translated on Transifex,
+but we don’t have a management process for it.
+This means that translations will often sit for months before making it back into the site and being available to users.</p>
+<p>This project would include puting together a workflow for translations:</p>
+<ul class="simple">
+<li>Communicate with existing translators and see what needs they have</li>
+<li>Help formalize the process that we have around Transifex to make it easier to contribute to</li>
+<li>Improve our tooling so that integrating new translations is easier</li>
+</ul>
+</div>
+<div class="section" id="support-for-additional-build-steps-for-linting-testing">
+<h3>Support for additional build steps for linting &amp; testing<a class="headerlink" href="#support-for-additional-build-steps-for-linting-testing" title="Permalink to this headline">¶</a></h3>
+<p>Currently we only build documentation on Read the Docs,
+but we’d also like to add additional build steps that lets users perform more actions.
+This would likely take the form of wraping some of the existing <a class="reference external" href="http://www.sphinx-doc.org/en/stable/builders.html">Sphinx builders</a>,
+and giving folks a nice way to use them inside Read the Docs.</p>
+<p>It would be great to have wrappers for the following as a start:</p>
+<ul class="simple">
+<li>Link Check (<a class="reference external" href="http://www.sphinx-doc.org/en/stable/builders.html#sphinx.builders.linkcheck.CheckExternalLinksBuilder">http://www.sphinx-doc.org/en/stable/builders.html#sphinx.builders.linkcheck.CheckExternalLinksBuilder</a>)</li>
+<li>Spell Check (<a class="reference external" href="https://pypi.python.org/pypi/sphinxcontrib-spelling/">https://pypi.python.org/pypi/sphinxcontrib-spelling/</a>)</li>
+<li>Doctest (<a class="reference external" href="http://www.sphinx-doc.org/en/stable/ext/doctest.html#module-sphinx.ext.doctest">http://www.sphinx-doc.org/en/stable/ext/doctest.html#module-sphinx.ext.doctest</a>)</li>
+<li>Coverage (<a class="reference external" href="http://www.sphinx-doc.org/en/stable/ext/coverage.html#module-sphinx.ext.coverage">http://www.sphinx-doc.org/en/stable/ext/coverage.html#module-sphinx.ext.coverage</a>)</li>
+</ul>
+<p>The goal would also be to make it quite easy for users to contribute third party build steps for Read the Docs,
+so that other useful parts of the Sphinx ecosystem could be tightly integrated with Read the Docs.</p>
+</div>
+<div class="section" id="collections-of-projects">
+<h3>Collections of Projects<a class="headerlink" href="#collections-of-projects" title="Permalink to this headline">¶</a></h3>
+<p>This project involves building a user interface for groups of projects in Read the Docs (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Collections</span></code>).
+Users would be allowed to create, publish, and search a <code class="xref py py-obj docutils literal notranslate"><span class="pre">Collection</span></code> of projects that they care about.
+We would also allow for automatic creation of <code class="xref py py-obj docutils literal notranslate"><span class="pre">Collections</span></code> based on a project’s <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> or <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>.</p>
+<p>Once a user has a <code class="xref py py-obj docutils literal notranslate"><span class="pre">Collection</span></code>,
+we would allow them to do a few sets of actions on them:</p>
+<ul class="simple">
+<li>Search across all the projects in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">Collection</span></code> with one search dialog</li>
+<li>Download all the project’s documentation (PDF, HTMLZip, Epub) for offline viewing</li>
+<li>Build a landing page for the collection that lists out all the projects, and could even have a user-editable description, similar to our project listing page.</li>
+</ul>
+<p>There is likely other ideas that could be done with <code class="xref py py-obj docutils literal notranslate"><span class="pre">Collections</span></code> over time.</p>
+</div>
+<div class="section" id="integrated-redirects">
+<h3>Integrated Redirects<a class="headerlink" href="#integrated-redirects" title="Permalink to this headline">¶</a></h3>
+<p>Right now it’s hard for users to rename files.
+We support redirects,
+but don’t create them automatically on file rename,
+and our redirect code is brittle.</p>
+<p>We should rebuild how we handle redirects across a number of cases:</p>
+<ul class="simple">
+<li>Detecting a file change in git/hg/svn and automatically creating a redirect</li>
+<li>Support redirecting an entire domain to another place</li>
+<li>Support redirecting versions</li>
+</ul>
+<p>There will also be a good number of things that spawn from this, including version aliases and other related concepts, if this task doesn’t take the whole summer.</p>
+</div>
+<div class="section" id="additional-ideas">
+<h3>Additional Ideas<a class="headerlink" href="#additional-ideas" title="Permalink to this headline">¶</a></h3>
+<p>We have some medium sized projects sketched out in our issue tracker with the tag <em>Feature Overview</em>.
+Looking through <a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues?direction=desc&amp;labels=Feature+Overview&amp;page=1&amp;sort=updated&amp;state=open">these issues</a> is a good place to start.
+You might also look through our <a class="reference external" href="https://github.com/rtfd/readthedocs.org/milestones">milestones</a> on GitHub,
+which provide outlines on the larger tasks that we’re hoping to accomplish.</p>
+</div>
+</div>
+<div class="section" id="thanks">
+<h2>Thanks<a class="headerlink" href="#thanks" title="Permalink to this headline">¶</a></h2>
+<p>This page was heavily inspired by Mailman’s similar <a class="reference external" href="http://wiki.list.org/display/DEV/Google+Summer+of+Code+2014">GSOC page</a>.
+Thanks for the inspiration.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="code-of-conduct.html" class="btn btn-neutral float-right" title="Code of Conduct" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="team.html" class="btn btn-neutral" title="Read the Docs Team" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2010-2018, Read the Docs, Inc &amp; contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

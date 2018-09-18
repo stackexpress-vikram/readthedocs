@@ -1,0 +1,693 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API v2 &mdash; Read the Docs 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API v1 (deprecated)" href="v1.html" />
+    <link rel="prev" title="Public API" href="index.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versions.html">Versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../builds.html">Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Read the Docs features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../yaml-config.html">Read the Docs YAML Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Public API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">API v2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#authentication-and-authorization">Authentication and authorization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resources">Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#projects">Projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#versions">Versions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#builds">Builds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#undocumented-resources-and-endpoints">Undocumented resources and endpoints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="v1.html">API v1 (deprecated)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../embed.html">Embed API</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About Read the Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contributing to Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../team.html">Read the Docs Team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gsoc.html">Google Summer of Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-of-conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advertising/index.html">Advertising</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sponsors.html">Sponsors of Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open-source-philosophy.html">Read the Docs Open Source Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../story.html">The Story of Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../abandoned-projects.html">Policy for Abandoned Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dmca/index.html">DMCA Takedown Policy</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Feature Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../webhooks.html">Webhooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../badges.html">Badges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../alternate_domains.html">Alternate Domains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../localization.html">Localization of Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vcs.html">Version Control System Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subprojects.html">Subprojects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conda.html">Conda Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../canonical.html">Canonical URLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../single_version.html">Single Version Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy.html">Privacy Levels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-defined-redirects.html">User-defined Redirects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../automatic-redirects.html">Automatic Redirects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/embed.html">Content Embedding</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tests.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs.html">Building and Contributing to Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/standards.html">Front End Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/buildenvironments.html">Build Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../symlinks.html">How we use symlinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings.html">Interesting Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../i18n.html">Internationalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../issue-labels.html">Overview of issue labels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Security</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Business Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../business/index.html">Read the Docs Business Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Custom Install Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../custom_installs/index.html">Info about custom installs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Designer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Designing Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/">Theme</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Read the Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Public API</a> &raquo;</li>
+        
+      <li>API v2</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/v2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-v2">
+<h1>API v2<a class="headerlink" href="#api-v2" title="Permalink to this headline">¶</a></h1>
+<p>The Read the Docs API uses <abbr title="Representational State Transfer">REST</abbr>.
+JSON is returned by all API responses including errors
+and HTTP response status codes are to designate success and failure.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>A newer API v3 is in early development stages.
+Some improvements coming in v3 are:</p>
+<ul class="simple">
+<li>Search API</li>
+<li>Write access</li>
+<li>Simpler URLs which use slugs instead of numeric IDs</li>
+<li>Improved error reporting</li>
+</ul>
+<p class="last">If there are features you would like in v3, please get in touch
+in the <a class="reference external" href="https://github.com/rtfd/readthedocs.org/issues">issue tracker</a>.</p>
+</div>
+<div class="section" id="authentication-and-authorization">
+<h2>Authentication and authorization<a class="headerlink" href="#authentication-and-authorization" title="Permalink to this headline">¶</a></h2>
+<p>Requests to the Read the Docs public API are for public information only
+and do not require any authentication.</p>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="projects">
+<h3>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h3>
+<p>Projects are the main building block of Read the Docs.
+Projects are built when there are changes to the code
+and the resulting documentation is hosted and served by Read the Docs.</p>
+<p>As an example, this documentation is part of the <a class="reference external" href="https://readthedocs.org/projects/docs/">Docs project</a>
+which has documentation at <a class="reference external" href="https://docs.readthedocs.io">https://docs.readthedocs.io</a>.</p>
+<p>You can always view your Read the Docs projects in your <a class="reference external" href="https://readthedocs.org/dashboard/">project dashboard</a>.</p>
+<div class="section" id="project-list">
+<h4>Project list<a class="headerlink" href="#project-list" title="Permalink to this headline">¶</a></h4>
+<dl class="get">
+<dt id="get--api-v2-project-">
+<code class="descname">GET </code><code class="descname">/api/v2/project/</code><a class="headerlink" href="#get--api-v2-project-" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a list of all Read the Docs projects.</p>
+<p><strong>Example request</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl https://readthedocs.org/api/v2/project/?slug<span class="o">=</span>pip
+</pre></div>
+</div>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;previous&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;results&quot;</span><span class="o">:</span> <span class="p">[</span><span class="nx">PROJECTS</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>next</strong> (<em>string</em>) – URI for next set of Projects.</li>
+<li><strong>previous</strong> (<em>string</em>) – URI for previous set of Projects.</li>
+<li><strong>count</strong> (<em>integer</em>) – Total number of Projects.</li>
+<li><strong>results</strong> (<em>array</em>) – Array of <code class="docutils literal notranslate"><span class="pre">Project</span></code> objects.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
+<li><strong>slug</strong> (<em>string</em>) – Narrow the results by matching the exact project slug</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="project-details">
+<h4>Project details<a class="headerlink" href="#project-details" title="Permalink to this headline">¶</a></h4>
+<dl class="get">
+<dt id="get--api-v2-project-(int-id)-">
+<code class="descname">GET </code><code class="descname">/api/v2/project/</code><span class="sig-paren">(</span><em class="property">int: </em><em>id</em><span class="sig-paren">)</span><code class="descname">/</code><a class="headerlink" href="#get--api-v2-project-(int-id)-" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve details of a single project.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Pip&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;slug&quot;</span><span class="o">:</span> <span class="s2">&quot;pip&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;programming_language&quot;</span><span class="o">:</span> <span class="s2">&quot;py&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;default_version&quot;</span><span class="o">:</span> <span class="s2">&quot;stable&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;default_branch&quot;</span><span class="o">:</span> <span class="s2">&quot;master&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;repo_type&quot;</span><span class="o">:</span> <span class="s2">&quot;git&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;repo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://github.com/pypa/pip&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;Pip Installs Packages.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;language&quot;</span><span class="o">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;documentation_type&quot;</span><span class="o">:</span> <span class="s2">&quot;sphinx_htmldir&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;canonical_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://pip.pypa.io/en/stable/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;users&quot;</span><span class="o">:</span> <span class="p">[</span><span class="nx">USERS</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>integer</em>) – The ID of the project</li>
+<li><strong>name</strong> (<em>string</em>) – The name of the project.</li>
+<li><strong>slug</strong> (<em>string</em>) – The project slug (used in the URL).</li>
+<li><strong>programming_language</strong> (<em>string</em>) – The programming language of the project (eg. “py”, “js”)</li>
+<li><strong>default_version</strong> (<em>string</em>) – The default version of the project (eg. “latest”, “stable”, “v3”)</li>
+<li><strong>default_branch</strong> (<em>string</em>) – The default version control branch</li>
+<li><strong>repo_type</strong> (<em>string</em>) – Version control repository of the project</li>
+<li><strong>repo</strong> (<em>string</em>) – The repository URL for the project</li>
+<li><strong>description</strong> (<em>string</em>) – An RST description of the project</li>
+<li><strong>language</strong> (<em>string</em>) – The language code of this project</li>
+<li><strong>documentation_type</strong> (<em>string</em>) – An RST description of the project</li>
+<li><strong>canonical_url</strong> (<em>string</em>) – The canonical URL of the default docs</li>
+<li><strong>users</strong> (<em>array</em>) – Array of <code class="docutils literal notranslate"><span class="pre">User</span></code> IDs who are maintainers of the project.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Status Codes:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – no error</li>
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a> – There is no <code class="docutils literal notranslate"><span class="pre">Project</span></code> with this ID</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="project-versions">
+<h4>Project versions<a class="headerlink" href="#project-versions" title="Permalink to this headline">¶</a></h4>
+<dl class="get">
+<dt id="get--api-v2-project-(int-id)-active_versions-">
+<code class="descname">GET </code><code class="descname">/api/v2/project/</code><span class="sig-paren">(</span><em class="property">int: </em><em>id</em><span class="sig-paren">)</span><code class="descname">/active_versions/</code><a class="headerlink" href="#get--api-v2-project-(int-id)-active_versions-" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a list of active versions (eg. “latest”, “stable”, “v1.x”) for a single project.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;versions&quot;</span><span class="o">:</span> <span class="p">[</span><span class="nx">VERSION</span><span class="p">,</span> <span class="nx">VERSION</span><span class="p">,</span> <span class="p">...]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
+<li><strong>versions</strong> (<em>array</em>) – Version objects for the given <code class="docutils literal notranslate"><span class="pre">Project</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a class="reference internal" href="#api-version-detail"><span class="std std-ref">Version detail</span></a> call for the format of the <code class="docutils literal notranslate"><span class="pre">Version</span></code> object.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="versions">
+<h3>Versions<a class="headerlink" href="#versions" title="Permalink to this headline">¶</a></h3>
+<p>Versions are different versions of the same project documentation</p>
+<p>The versions for a given project can be viewed in a project’s version screen.
+For example, here is the <a class="reference external" href="https://readthedocs.org/projects/pip/versions/">Pip project’s version screen</a>.</p>
+<div class="section" id="version-list">
+<h4>Version list<a class="headerlink" href="#version-list" title="Permalink to this headline">¶</a></h4>
+<dl class="get">
+<dt id="get--api-v2-version-">
+<code class="descname">GET </code><code class="descname">/api/v2/version/</code><a class="headerlink" href="#get--api-v2-version-" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a list of all Versions for all projects</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="s2">&quot;previous&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;results&quot;</span><span class="o">:</span> <span class="p">[</span><span class="nx">VERSIONS</span><span class="p">],</span>
+    <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="s2">&quot;https://readthedocs.org/api/v2/version/?limit=10&amp;offset=10&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>next</strong> (<em>string</em>) – URI for next set of Versions.</li>
+<li><strong>previous</strong> (<em>string</em>) – URI for previous set of Versions.</li>
+<li><strong>count</strong> (<em>integer</em>) – Total number of Versions.</li>
+<li><strong>results</strong> (<em>array</em>) – Array of <code class="docutils literal notranslate"><span class="pre">Version</span></code> objects.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
+<li><strong>project__slug</strong> (<em>string</em>) – Narrow to the versions for a specific <code class="docutils literal notranslate"><span class="pre">Project</span></code></li>
+<li><strong>active</strong> (<em>boolean</em>) – Pass <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> to show only active or inactive versions.
+By default, the API returns all versions.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="version-detail">
+<span id="api-version-detail"></span><h4>Version detail<a class="headerlink" href="#version-detail" title="Permalink to this headline">¶</a></h4>
+<dl class="get">
+<dt id="get--api-v2-version-(int-id)-">
+<code class="descname">GET </code><code class="descname">/api/v2/version/</code><span class="sig-paren">(</span><em class="property">int: </em><em>id</em><span class="sig-paren">)</span><code class="descname">/</code><a class="headerlink" href="#get--api-v2-version-(int-id)-" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve details of a single version.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1437428</span><span class="p">,</span>
+    <span class="s2">&quot;slug&quot;</span><span class="o">:</span> <span class="s2">&quot;stable&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;verbose_name&quot;</span><span class="o">:</span> <span class="s2">&quot;stable&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;built&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;active&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;tag&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;identifier&quot;</span><span class="o">:</span> <span class="s2">&quot;3a6b3995c141c0888af6591a59240ba5db7d9914&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;downloads&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;pdf&quot;</span><span class="o">:</span> <span class="s2">&quot;//readthedocs.org/projects/pip/downloads/pdf/stable/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;htmlzip&quot;</span><span class="o">:</span> <span class="s2">&quot;//readthedocs.org/projects/pip/downloads/htmlzip/stable/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;epub&quot;</span><span class="o">:</span> <span class="s2">&quot;//readthedocs.org/projects/pip/downloads/epub/stable/&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;project&quot;</span><span class="o">:</span> <span class="p">{</span><span class="nx">PROJECT</span><span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>integer</em>) – The ID of the version</li>
+<li><strong>verbose_name</strong> (<em>string</em>) – The name of the version.</li>
+<li><strong>slug</strong> (<em>string</em>) – The version slug.</li>
+<li><strong>built</strong> (<em>string</em>) – Whether this version has been built</li>
+<li><strong>active</strong> (<em>string</em>) – Whether this version is still active</li>
+<li><strong>type</strong> (<em>string</em>) – The type of this version (typically “tag” or “branch”)</li>
+<li><strong>identifier</strong> (<em>string</em>) – A version control identifier for this version (eg. the commit hash of the tag)</li>
+<li><strong>downloads</strong> (<em>array</em>) – URLs to downloads of this version’s documentation</li>
+<li><strong>project</strong> (<em>object</em>) – Details of the <code class="docutils literal notranslate"><span class="pre">Project</span></code> for this version.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Status Codes:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – no error</li>
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a> – There is no <code class="docutils literal notranslate"><span class="pre">Version</span></code> with this ID</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="builds">
+<h3>Builds<a class="headerlink" href="#builds" title="Permalink to this headline">¶</a></h3>
+<p>Builds are created by Read the Docs whenever a <code class="docutils literal notranslate"><span class="pre">Project</span></code> has its documentation built.
+Frequently this happens automatically via a web hook but can be triggered manually.</p>
+<p>Builds can be viewed in the build screen for a project.
+For example, here is <a class="reference external" href="https://readthedocs.org/projects/pip/builds/">Pip’s build screen</a>.</p>
+<div class="section" id="build-list">
+<h4>Build list<a class="headerlink" href="#build-list" title="Permalink to this headline">¶</a></h4>
+<dl class="get">
+<dt id="get--api-v2-build-">
+<code class="descname">GET </code><code class="descname">/api/v2/build/</code><a class="headerlink" href="#get--api-v2-build-" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve details of builds ordered by most recent first</p>
+<p><strong>Example request</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl https://readthedocs.org/api/v2/build/?project__slug<span class="o">=</span>pip
+</pre></div>
+</div>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;previous&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;results&quot;</span><span class="o">:</span> <span class="p">[</span><span class="nx">BUILDS</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>next</strong> (<em>string</em>) – URI for next set of Builds.</li>
+<li><strong>previous</strong> (<em>string</em>) – URI for previous set of Builds.</li>
+<li><strong>count</strong> (<em>integer</em>) – Total number of Builds.</li>
+<li><strong>results</strong> (<em>array</em>) – Array of <code class="docutils literal notranslate"><span class="pre">Build</span></code> objects.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
+<li><strong>project__slug</strong> (<em>string</em>) – Narrow to builds for a specific <code class="docutils literal notranslate"><span class="pre">Project</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="build-detail">
+<h4>Build detail<a class="headerlink" href="#build-detail" title="Permalink to this headline">¶</a></h4>
+<dl class="get">
+<dt id="get--api-v2-build-(int-id)-">
+<code class="descname">GET </code><code class="descname">/api/v2/build/</code><span class="sig-paren">(</span><em class="property">int: </em><em>id</em><span class="sig-paren">)</span><code class="descname">/</code><a class="headerlink" href="#get--api-v2-build-(int-id)-" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve details of a single build.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">7367364</span><span class="p">,</span>
+    <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-06-19T15:15:59.135894&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;length&quot;</span><span class="o">:</span> <span class="mi">59</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;html&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;state&quot;</span><span class="o">:</span> <span class="s2">&quot;finished&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;commit&quot;</span><span class="o">:</span> <span class="s2">&quot;6f808d743fd6f6907ad3e2e969c88a549e76db30&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;docs_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://pip.pypa.io/en/latest/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;project&quot;</span><span class="o">:</span> <span class="mi">13</span><span class="p">,</span>
+    <span class="s2">&quot;project_slug&quot;</span><span class="o">:</span> <span class="s2">&quot;pip&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="mi">3681</span><span class="p">,</span>
+    <span class="s2">&quot;version_slug&quot;</span><span class="o">:</span> <span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;commands&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;start_time&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-06-19T20:16:00.951959&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;exit_code&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;build&quot;</span><span class="o">:</span> <span class="mi">7367364</span><span class="p">,</span>
+            <span class="s2">&quot;command&quot;</span><span class="o">:</span> <span class="s2">&quot;git remote set-url origin git://github.com/pypa/pip.git&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;run_time&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;output&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">42852216</span><span class="p">,</span>
+            <span class="s2">&quot;end_time&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-06-19T20:16:00.969170&quot;</span>
+        <span class="p">},</span>
+        <span class="p">...</span>
+    <span class="p">],</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>integer</em>) – The ID of the build</li>
+<li><strong>date</strong> (<em>string</em>) – The ISO-8601 datetime of the build.</li>
+<li><strong>length</strong> (<em>integer</em>) – The length of the build in seconds.</li>
+<li><strong>type</strong> (<em>string</em>) – The type of the build (one of “html”, “pdf”, “epub”)</li>
+<li><strong>state</strong> (<em>string</em>) – The state of the build (one of “triggered”, “building”, “installing”, “cloning”, or “finished”)</li>
+<li><strong>success</strong> (<em>boolean</em>) – Whether the build was successful</li>
+<li><strong>error</strong> (<em>string</em>) – An error message if the build was unsuccessful</li>
+<li><strong>commit</strong> (<em>string</em>) – A version control identifier for this build (eg. the commit hash)</li>
+<li><strong>docs_url</strong> (<em>string</em>) – The canonical URL of the build docs</li>
+<li><strong>project</strong> (<em>integer</em>) – The ID of the project being built</li>
+<li><strong>project_slug</strong> (<em>string</em>) – The slug for the project being built</li>
+<li><strong>version</strong> (<em>integer</em>) – The ID of the version of the project being built</li>
+<li><strong>version_slug</strong> (<em>string</em>) – The slug for the version of the project being built</li>
+<li><strong>commands</strong> (<em>array</em>) – Array of commands for the build with details including output.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Status Codes:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – no error</li>
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a> – There is no <code class="docutils literal notranslate"><span class="pre">Build</span></code> with this ID</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Some fields primarily used for UI elements in Read the Docs are omitted.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="undocumented-resources-and-endpoints">
+<h3>Undocumented resources and endpoints<a class="headerlink" href="#undocumented-resources-and-endpoints" title="Permalink to this headline">¶</a></h3>
+<p>There are some undocumented endpoints in the API.
+These should not be used and could change at any time.
+These include:</p>
+<ul class="simple">
+<li>The search API (<code class="docutils literal notranslate"><span class="pre">/api/v2/search/</span></code>)</li>
+<li>Endpoints for returning footer and version data to be injected into docs.
+(<code class="docutils literal notranslate"><span class="pre">/api/v2/footer_html</span></code>)</li>
+<li>Endpoints used for advertising (<code class="docutils literal notranslate"><span class="pre">/api/v2/sustainability/</span></code>)</li>
+<li>Any other endpoints not detailed above.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="v1.html" class="btn btn-neutral float-right" title="API v1 (deprecated)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Public API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2010-2018, Read the Docs, Inc &amp; contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
